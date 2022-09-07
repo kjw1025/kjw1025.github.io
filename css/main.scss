@@ -311,8 +311,6 @@ $main-color: #29306A;
 
             background: url('../images/baexang_top_h.svg') no-repeat top center;
             background-size: cover;
-            background-color: #000;
-            // opacity: 0.1;
         }
         .po2 {
             position: relative;
@@ -373,6 +371,10 @@ $main-color: #29306A;
                         background: url('../images/icon/chrome_icon.svg') no-repeat center;
                         background-size: cover;
                     }
+                    &:nth-child(6) a {
+                        background: url('../images/icon/figma_Navy_icon.svg') no-repeat center;
+                        background-size: cover;
+                    }
                 }
 
                 
@@ -408,18 +410,44 @@ $main-color: #29306A;
 .ptptpt2 {
     top: 500px;
     left: 800px;
+    .popopo{
+        .po1 {
+            background: url('../images/oska-product_home.png') no-repeat top center;
+            background-size: cover;
+        }
+    }
+    
 }
 .ptptpt3 {
     top: 100px;
     left: 1300px;
+
+    .popopo{
+        .po1 {
+            background: url('../images/twosome_home.svg') no-repeat top center;
+            background-size: cover;
+        }
+    }
 }
 .ptptpt4 {
     top: 1150px;
     left: 480px;
+    .popopo{
+        .po1 {
+            background: url('../images/jugyug_home.png') no-repeat top center;
+            background-size: cover;
+        }
+    }
 }
 .ptptpt5 {
     top: 1000px;
     left: 1200px;
+    .popopo{
+        .po1 {
+            background: url('../images/ormak_home.png') no-repeat top center;
+            background-size: cover;
+        }
+    }
 }
 
 

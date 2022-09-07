@@ -240,7 +240,6 @@ body {
   height: 80%;
   background: url("../images/baexang_top_h.svg") no-repeat top center;
   background-size: cover;
-  background-color: #000;
 }
 .sample2 .popopo .po2 {
   position: relative;
@@ -294,6 +293,10 @@ body {
   background: url("../images/icon/chrome_icon.svg") no-repeat center;
   background-size: cover;
 }
+.sample2 .popopo .po2 .icon-box li:nth-child(6) a {
+  background: url("../images/icon/figma_Navy_icon.svg") no-repeat center;
+  background-size: cover;
+}
 .sample2 .popopo::before {
   content: "01";
   position: absolute;
@@ -318,20 +321,36 @@ body {
   top: 500px;
   left: 800px;
 }
+.ptptpt2 .popopo .po1 {
+  background: url("../images/oska-product_home.png") no-repeat top center;
+  background-size: cover;
+}
 
 .ptptpt3 {
   top: 100px;
   left: 1300px;
+}
+.ptptpt3 .popopo .po1 {
+  background: url("../images/twosome_home.svg") no-repeat top center;
+  background-size: cover;
 }
 
 .ptptpt4 {
   top: 1150px;
   left: 480px;
 }
+.ptptpt4 .popopo .po1 {
+  background: url("../images/jugyug_home.png") no-repeat top center;
+  background-size: cover;
+}
 
 .ptptpt5 {
   top: 1000px;
   left: 1200px;
+}
+.ptptpt5 .popopo .po1 {
+  background: url("../images/ormak_home.png") no-repeat top center;
+  background-size: cover;
 }
 
 /* ===== ///Portfolio ===== */
