@@ -31,4 +31,12 @@ window.onload = function () {
     MyWaypoint($('.pf_bg_1'), 'down-go', '10%', 0);
 
 
+    // swiper
+
+    // study swiper img
+    let swStudy_Img = new Swiper('.sw_study_img', {
+        slidesPerView: 4
+    });
+
+
 }

@@ -88,8 +88,10 @@ $main-color: #29306A;
         background-size: cover;
     }
 }
+
 .toptoptop {
     left: 62%;
+
     a {
         background: url('../images/icon/figma_icon.svg') no-repeat center;
         background-size: cover;
@@ -252,7 +254,7 @@ $main-color: #29306A;
     position: relative;
     display: block;
     width: 100%;
-    height: 2000px;
+    height: 3500px;
 }
 
 .pf_bg_1 {
@@ -286,7 +288,7 @@ $main-color: #29306A;
         margin: 0 auto;
 
         box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
-        background: linear-gradient( to top, rgba(0, 0, 0, 0.25), transparent);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent);
     }
 
     .popopo {
@@ -309,7 +311,10 @@ $main-color: #29306A;
 
             background: url('../images/baexang_top_h.svg') no-repeat top center;
             background-size: cover;
+
+            
         }
+
         .po2 {
             position: relative;
             display: block;
@@ -353,29 +358,34 @@ $main-color: #29306A;
                         background: url('../images/icon/web_icon.svg') no-repeat center;
                         background-size: cover;
                     }
+
                     &:nth-child(2) a {
                         background: url('../images/icon/responsive_icon.svg') no-repeat center;
                         background-size: cover;
                     }
+
                     &:nth-child(3) a {
                         background: url('../images/icon/vue_icon.svg') no-repeat center;
                         background-size: cover;
                     }
+
                     &:nth-child(4) a {
                         background: url('../images/icon/github_icon.svg') no-repeat center;
                         background-size: cover;
                     }
+
                     &:nth-child(5) a {
                         background: url('../images/icon/chrome_icon.svg') no-repeat center;
                         background-size: cover;
                     }
+
                     &:nth-child(6) a {
                         background: url('../images/icon/figma_Navy_icon.svg') no-repeat center;
                         background-size: cover;
                     }
                 }
 
-                
+
             }
         }
 
@@ -389,6 +399,7 @@ $main-color: #29306A;
             font-size: 22px;
             color: #000;
         }
+
         &::after {
             content: 'Lorem ipsum dolor sit amet.';
             position: absolute;
@@ -408,39 +419,45 @@ $main-color: #29306A;
 .ptptpt2 {
     top: 500px;
     left: 800px;
-    .popopo{
+
+    .popopo {
         .po1 {
             background: url('../images/oska-product_home.png') no-repeat top center;
             background-size: cover;
         }
     }
-    
+
 }
+
 .ptptpt3 {
     top: 100px;
     left: 1300px;
 
-    .popopo{
+    .popopo {
         .po1 {
             background: url('../images/twosome_home.svg') no-repeat top center;
             background-size: cover;
         }
     }
 }
+
 .ptptpt4 {
     top: 1150px;
     left: 480px;
-    .popopo{
+
+    .popopo {
         .po1 {
             background: url('../images/jugyug_home.png') no-repeat top center;
             background-size: cover;
         }
     }
 }
+
 .ptptpt5 {
     top: 1000px;
     left: 1200px;
-    .popopo{
+
+    .popopo {
         .po1 {
             background: url('../images/ormak_home.png') no-repeat top center;
             background-size: cover;
@@ -448,6 +465,156 @@ $main-color: #29306A;
     }
 }
 
+// 스터디클론
+.study-clone {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0.05);
+
+    .headerBox {
+        position: absolute;
+        display: block;
+        width: 1000px;
+        height: 80px;
+
+        background-color: $main-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        animation-name: togolong;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        // animation-fill-mode: forwards;
+
+
+        span {
+            position: absolute;
+            top: 15px;
+            right: 80px;
+            display: inline-block;
+
+            font-family: 'Ibarra Real Nova';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 45px;
+            color: #FFFFFF;
+        }
+
+        @keyframes togolong {
+            0% {
+                left: -1000px;
+            }
+            100% {
+                left: 0;
+            }
+        }
+    }
+
+
+    // img
+    .sw_study_img {
+        position: absolute;
+        top: 150px;
+        left: 300px;
+        display: block;
+        width: 1300px;
+        height: 375px;
+
+        background-color: #333;
+        filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+
+        &-slide_wrap {
+            position: relative;
+            display: block;
+            width: 300px;
+            height: 100%;
+
+            img {
+                width: 100%;
+            }
+
+            .titleBox {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 225px;
+                height: 38px;
+
+                background: rgba(50, 74, 94, 0.9);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+
+                transition: all 0.5s;
+
+                span {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: inline-block;
+
+                    font-family: 'Noto Sans KR';
+                    font-style: normal;
+                    font-weight: 100;
+                    font-size: 18px;
+                    line-height: 26px;
+                    text-align: center;
+                    color: #FFFFFF;
+
+                    white-space: nowrap;
+                }
+            }
+
+            .infoBox {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 170px;
+                height: 150px;
+
+                
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+
+                    background: rgba(50, 74, 94, 0.95);
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                    transform: scaleX(0);
+                    transform-origin: 0 50%;
+                    transition-duration: 0.4s;
+                    transition-timing-function: ease-out;
+
+                    transition-delay: 1s;
+                }
+            }
+
+            // ani
+            &:hover .titleBox {
+                top: 15%;
+            }
+            &:hover .infoBox::before {
+                transform: scaleX(1);
+            }
+        }
+    }
+
+
+
+}
 
 
 /* ===== ///Portfolio ===== */

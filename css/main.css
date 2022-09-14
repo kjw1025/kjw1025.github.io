@@ -191,7 +191,7 @@ body {
   position: relative;
   display: block;
   width: 100%;
-  height: 2000px;
+  height: 3500px;
 }
 
 .pf_bg_1 {
@@ -350,6 +350,135 @@ body {
 .ptptpt5 .popopo .po1 {
   background: url("../images/ormak_home.png") no-repeat top center;
   background-size: cover;
+}
+
+.study-clone {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1000px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.study-clone .headerBox {
+  position: absolute;
+  display: block;
+  width: 1000px;
+  height: 80px;
+  background-color: #29306A;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-animation-name: togolong;
+          animation-name: togolong;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.study-clone .headerBox span {
+  position: absolute;
+  top: 15px;
+  right: 80px;
+  display: inline-block;
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 45px;
+  color: #FFFFFF;
+}
+@-webkit-keyframes togolong {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes togolong {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0;
+  }
+}
+.study-clone .sw_study_img {
+  position: absolute;
+  top: 150px;
+  left: 300px;
+  display: block;
+  width: 1300px;
+  height: 375px;
+  background-color: #333;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+}
+.study-clone .sw_study_img-slide_wrap {
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 100%;
+}
+.study-clone .sw_study_img-slide_wrap img {
+  width: 100%;
+}
+.study-clone .sw_study_img-slide_wrap .titleBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 225px;
+  height: 38px;
+  background: rgba(50, 74, 94, 0.9);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.study-clone .sw_study_img-slide_wrap .titleBox span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+.study-clone .sw_study_img-slide_wrap .infoBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 170px;
+  height: 150px;
+}
+.study-clone .sw_study_img-slide_wrap .infoBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(50, 74, 94, 0.95);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-out;
+  transition-delay: 1s;
+}
+.study-clone .sw_study_img-slide_wrap:hover .titleBox {
+  top: 15%;
+}
+.study-clone .sw_study_img-slide_wrap:hover .infoBox::before {
+  transform: scaleX(1);
 }
 
 /* ===== ///Portfolio ===== */
