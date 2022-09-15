@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: "Ibarra Real Nova", "Noto Serif KR", "Noto Sans KR", sans-serif;
+  font-family: "Ibarra Real Nova", "NanumSquareRound";
 }
 
 .wrap {
@@ -32,20 +32,6 @@ body {
   display: block;
   width: 100%;
   overflow: hidden;
-}
-.wrap::-webkit-scrollbar {
-  width: 10px;
-  opacity: 0;
-}
-.wrap::-webkit-scrollbar-track {
-  top: 10px;
-  left: -10px;
-  opacity: 0;
-}
-.wrap::-webkit-scrollbar-thumb {
-  background-color: rgba(41, 48, 106, 0.7);
-  border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 .sample1 {
@@ -173,7 +159,7 @@ body {
   top: 300px;
   left: 100px;
   display: block;
-  font-family: "Noto Sans KR";
+  font-family: "NanumSquareRound";
   font-size: 140px;
 }
 .home .home-left p {
@@ -181,6 +167,7 @@ body {
   top: 350px;
   left: 200px;
   display: block;
+  font-family: "NanumSquareRound";
   font-size: 70px;
 }
 .home .home-left p span {
@@ -205,10 +192,15 @@ body {
   position: relative;
   display: block;
   width: 100%;
-  height: 3500px;
 }
 
-.pf_bg_1 {
+.portfolio-part_1 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2000px;
+}
+.portfolio-part_1 .pf_bg_1 {
   position: absolute;
   top: 0px;
   left: 150px;
@@ -219,8 +211,7 @@ body {
   background-size: cover;
   opacity: 0;
 }
-
-.sample2 {
+.portfolio-part_1 .sample2 {
   position: absolute;
   top: 300px;
   left: 300px;
@@ -229,7 +220,7 @@ body {
   height: 800px;
   z-index: 100;
 }
-.sample2 span {
+.portfolio-part_1 .sample2 span {
   position: relative;
   display: block;
   width: 1px;
@@ -238,7 +229,7 @@ body {
   box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
   background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent);
 }
-.sample2 .popopo {
+.portfolio-part_1 .sample2 .popopo {
   position: relative;
   display: block;
   width: 100%;
@@ -246,57 +237,25 @@ body {
   border: 3px solid rgba(0, 0, 0, 0.05);
   filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.sample2 .popopo .po1 {
+.portfolio-part_1 .sample2 .popopo .po1 {
   position: relative;
   display: block;
   width: 100%;
   height: 80%;
-  background: url("../images/baexang_top_h.svg") no-repeat top center;
-  background-size: cover;
-}
-.sample2 .popopo .po1:hover .po1-focus-wrap {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-}
-.sample2 .popopo .po1 .po1-focus-wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.65);
-  display: block;
-  width: 500px;
-  height: 600px;
-  z-index: 999;
   overflow-y: auto;
-  opacity: 0;
-  transition: all 0.5s ease-out;
 }
-.sample2 .popopo .po1 .po1-focus-wrap::-webkit-scrollbar {
-  width: 10px;
-  opacity: 0;
-}
-.sample2 .popopo .po1 .po1-focus-wrap::-webkit-scrollbar-track {
-  top: 10px;
-  left: -10px;
-  opacity: 0;
-}
-.sample2 .popopo .po1 .po1-focus-wrap::-webkit-scrollbar-thumb {
-  background-color: rgba(41, 48, 106, 0.7);
-  border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-.sample2 .popopo .po1 .po1-focus-wrap a {
+.portfolio-part_1 .sample2 .popopo .po1 a {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
 }
-.sample2 .popopo .po1 .po1-focus-wrap a img {
+.portfolio-part_1 .sample2 .popopo .po1 a img {
   position: relative;
   display: block;
   width: 100%;
 }
-.sample2 .popopo .po2 {
+.portfolio-part_1 .sample2 .popopo .po2 {
   position: relative;
   display: block;
   width: 100%;
@@ -304,11 +263,10 @@ body {
   padding: 10px;
   background-color: #29306A;
 }
-.sample2 .popopo .po2 p {
+.portfolio-part_1 .sample2 .popopo .po2 p {
   position: relative;
   display: block;
   width: 100%;
-  font-family: "Noto Sans KR";
   font-weight: 200;
   font-size: 18px;
   color: #fff;
@@ -316,7 +274,7 @@ body {
   line-height: 65px;
   transition: all 0.5s;
 }
-.sample2 .popopo .po2 .icon-box {
+.portfolio-part_1 .sample2 .popopo .po2 .icon-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -327,43 +285,43 @@ body {
   opacity: 0;
   transition: all 0.5s;
 }
-.sample2 .popopo .po2 .icon-box li a {
+.portfolio-part_1 .sample2 .popopo .po2 .icon-box li a {
   position: relative;
   display: block;
   width: 40px;
   height: 40px;
 }
-.sample2 .popopo .po2 .icon-box li:nth-child(1) a {
+.portfolio-part_1 .sample2 .popopo .po2 .icon-box li:nth-child(1) a {
   background: url("../images/icon/web_icon.svg") no-repeat center;
   background-size: cover;
 }
-.sample2 .popopo .po2 .icon-box li:nth-child(2) a {
+.portfolio-part_1 .sample2 .popopo .po2 .icon-box li:nth-child(2) a {
   background: url("../images/icon/responsive_icon.svg") no-repeat center;
   background-size: cover;
 }
-.sample2 .popopo .po2 .icon-box li:nth-child(3) a {
+.portfolio-part_1 .sample2 .popopo .po2 .icon-box li:nth-child(3) a {
   background: url("../images/icon/vue_icon.svg") no-repeat center;
   background-size: cover;
 }
-.sample2 .popopo .po2 .icon-box li:nth-child(4) a {
+.portfolio-part_1 .sample2 .popopo .po2 .icon-box li:nth-child(4) a {
   background: url("../images/icon/github_icon.svg") no-repeat center;
   background-size: cover;
 }
-.sample2 .popopo .po2 .icon-box li:nth-child(5) a {
+.portfolio-part_1 .sample2 .popopo .po2 .icon-box li:nth-child(5) a {
   background: url("../images/icon/chrome_icon.svg") no-repeat center;
   background-size: cover;
 }
-.sample2 .popopo .po2 .icon-box li:nth-child(6) a {
+.portfolio-part_1 .sample2 .popopo .po2 .icon-box li:nth-child(6) a {
   background: url("../images/icon/figma_Navy_icon.svg") no-repeat center;
   background-size: cover;
 }
-.sample2 .popopo .po2:hover p {
+.portfolio-part_1 .sample2 .popopo .po2:hover p {
   opacity: 0;
 }
-.sample2 .popopo .po2:hover .icon-box {
+.portfolio-part_1 .sample2 .popopo .po2:hover .icon-box {
   opacity: 1;
 }
-.sample2 .popopo::before {
+.portfolio-part_1 .sample2 .popopo::before {
   content: "01";
   position: absolute;
   top: -30px;
@@ -372,7 +330,7 @@ body {
   font-size: 22px;
   color: #000;
 }
-.sample2 .popopo::after {
+.portfolio-part_1 .sample2 .popopo::after {
   content: "Lorem ipsum dolor sit amet.";
   position: absolute;
   top: 80px;
@@ -382,53 +340,31 @@ body {
   color: #000;
   transform: rotate(90deg);
 }
-
-.ptptpt2 {
+.portfolio-part_1 .ptptpt2 {
   top: 500px;
   left: 800px;
 }
-.ptptpt2 .popopo .po1 {
-  background: url("../images/oska-product_home.png") no-repeat top center;
-  background-size: cover;
-}
-
-.ptptpt3 {
+.portfolio-part_1 .ptptpt3 {
   top: 100px;
   left: 1300px;
 }
-.ptptpt3 .popopo .po1 {
-  background: url("../images/twosome_home.svg") no-repeat top center;
-  background-size: cover;
-}
-
-.ptptpt4 {
+.portfolio-part_1 .ptptpt4 {
   top: 1150px;
   left: 480px;
 }
-.ptptpt4 .popopo .po1 {
-  background: url("../images/jugyug_home.png") no-repeat top center;
-  background-size: cover;
-}
-
-.ptptpt5 {
+.portfolio-part_1 .ptptpt5 {
   top: 1000px;
   left: 1200px;
 }
-.ptptpt5 .popopo .po1 {
-  background: url("../images/ormak_home.png") no-repeat top center;
-  background-size: cover;
-}
 
-.study-clone {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.portfolio-part_2 {
+  position: relative;
   display: block;
   width: 100%;
   height: 1000px;
   background-color: rgba(0, 0, 0, 0.05);
 }
-.study-clone .headerBox {
+.portfolio-part_2 .headerBox {
   position: absolute;
   left: -1000px;
   display: block;
@@ -436,39 +372,39 @@ body {
   height: 80px;
   background-color: #29306A;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0 10px 10px 0;
 }
-.study-clone .headerBox span {
+.portfolio-part_2 .headerBox span {
   position: absolute;
   top: 15px;
-  right: 80px;
+  right: 70px;
   display: inline-block;
-  font-family: "Ibarra Real Nova";
+  font-family: "RIDIBatang";
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
   line-height: 45px;
   color: #FFFFFF;
 }
-.study-clone .sw_study_img {
+.portfolio-part_2 .sw_study_img {
   position: absolute;
   top: 150px;
   left: 300px;
   display: block;
   width: 1300px;
   height: 375px;
-  background-color: #333;
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
 }
-.study-clone .sw_study_img-slide_wrap {
+.portfolio-part_2 .sw_study_img-slide_wrap {
   position: relative;
   display: block;
   width: 300px;
   height: 100%;
 }
-.study-clone .sw_study_img-slide_wrap img {
+.portfolio-part_2 .sw_study_img-slide_wrap img {
   width: 100%;
 }
-.study-clone .sw_study_img-slide_wrap .titleBox {
+.portfolio-part_2 .sw_study_img-slide_wrap .titleBox {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -481,13 +417,12 @@ body {
   border-radius: 10px;
   transition: all 0.5s;
 }
-.study-clone .sw_study_img-slide_wrap .titleBox span {
+.portfolio-part_2 .sw_study_img-slide_wrap .titleBox span {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: inline-block;
-  font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 100;
   font-size: 18px;
@@ -496,7 +431,7 @@ body {
   color: #FFFFFF;
   white-space: nowrap;
 }
-.study-clone .sw_study_img-slide_wrap .infoBox {
+.portfolio-part_2 .sw_study_img-slide_wrap .infoBox {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -505,7 +440,7 @@ body {
   width: 170px;
   height: 150px;
 }
-.study-clone .sw_study_img-slide_wrap .infoBox::before {
+.portfolio-part_2 .sw_study_img-slide_wrap .infoBox::before {
   content: "";
   position: absolute;
   top: 0;
@@ -520,11 +455,54 @@ body {
   transition-timing-function: ease-out;
   transition-delay: 1s;
 }
-.study-clone .sw_study_img-slide_wrap:hover .titleBox {
+.portfolio-part_2 .sw_study_img-slide_wrap:hover .titleBox {
   top: 15%;
 }
-.study-clone .sw_study_img-slide_wrap:hover .infoBox::before {
+.portfolio-part_2 .sw_study_img-slide_wrap:hover .infoBox::before {
   transform: scaleX(1);
+}
+
+.portfolio-part_skill {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 900px;
+  background-color: rgba(51, 51, 51, 0.2);
+}
+.portfolio-part_skill .sample5 {
+  position: absolute;
+  display: block;
+  width: 450px;
+  height: 400px;
+  background-color: #C4DDED;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+.portfolio-part_skill .sample5 span {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  font-family: "Cafe24Oneprettynight";
+  font-size: 30px;
+  white-space: nowrap;
+}
+.portfolio-part_skill .son1 {
+  top: 120px;
+  left: 400px;
+}
+.portfolio-part_skill .son2 {
+  top: 10px;
+  right: 550px;
+  width: 325px;
+  height: 340px;
+}
+.portfolio-part_skill .son3 {
+  bottom: 110px;
+  right: 615px;
+  width: 300px;
+  height: 350px;
 }
 
 /* ===== ///Portfolio ===== */
@@ -534,7 +512,6 @@ body {
           animation: down-go 1s 1 ease-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  opacity: 1;
 }
 
 @-webkit-keyframes down-go {

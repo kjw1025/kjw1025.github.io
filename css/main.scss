@@ -25,27 +25,10 @@ img {
 
 html {
     font-size: 16px;
-
-    &::-webkit-scrollbar {
-        width: 10px;
-        opacity: 0;
-    }
-
-    &::-webkit-scrollbar-track {
-        top: 10px;
-        left: -10px;
-        opacity: 0;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: rgba($color: $main-color, $alpha: 0.7);
-        border-radius: 10px;
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    }
 }
 
 body {
-    font-family: 'Ibarra Real Nova', 'Noto Serif KR', 'Noto Sans KR', sans-serif;
+    font-family: 'Ibarra Real Nova', 'NanumSquareRound';
 }
 
 
@@ -60,7 +43,7 @@ body {
 // }
 
 
-
+//  변수
 // 메인컬러
 $main-color: #29306A;
 
@@ -71,8 +54,6 @@ $main-color: #29306A;
     width: 100%;
 
     overflow: hidden;
-
-
 }
 
 
@@ -230,7 +211,7 @@ $main-color: #29306A;
             left: 100px;
             display: block;
 
-            font-family: 'Noto Sans KR';
+            font-family: 'NanumSquareRound';
             font-size: 140px;
         }
 
@@ -240,6 +221,7 @@ $main-color: #29306A;
             left: 200px;
             display: block;
 
+            font-family: 'NanumSquareRound';
             font-size: 70px;
 
             span {
@@ -273,102 +255,68 @@ $main-color: #29306A;
     position: relative;
     display: block;
     width: 100%;
-    height: 3500px;
+    // height: 3500px;
 }
 
-.pf_bg_1 {
-    position: absolute;
-    top: 0px;
-    left: 150px;
+
+// clone code
+.portfolio-part_1 {
+    position: relative;
     display: block;
-    width: 1700px;
-    height: 1700px;
+    width: 100%;
+    height: 2000px;
 
-    background: url('../images/paint_smear_0.svg') no-repeat center;
-    background-size: cover;
-    opacity: 0;
-}
-
-.sample2 {
-    position: absolute;
-    top: 300px;
-    left: 300px;
-    display: block;
-    width: 350px;
-    height: 800px;
-
-    z-index: 100;
-
-    span {
-        position: relative;
+    .pf_bg_1 {
+        position: absolute;
+        top: 0px;
+        left: 150px;
         display: block;
-        width: 1px;
-        height: 40%;
-        margin: 0 auto;
+        width: 1700px;
+        height: 1700px;
 
-        box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent);
+        background: url('../images/paint_smear_0.svg') no-repeat center;
+        background-size: cover;
+        opacity: 0;
     }
 
-    .popopo {
-        position: relative;
+    .sample2 {
+        position: absolute;
+        top: 300px;
+        left: 300px;
         display: block;
-        width: 100%;
-        height: 60%;
-        // background-color: #fff;
+        width: 350px;
+        height: 800px;
 
-        // padding: 3px;    
-        border: 3px solid rgba(0, 0, 0, 0.05);
+        z-index: 100;
 
-        filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
+        span {
+            position: relative;
+            display: block;
+            width: 1px;
+            height: 40%;
+            margin: 0 auto;
 
-        .po1 {
+            box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent);
+        }
+
+        .popopo {
             position: relative;
             display: block;
             width: 100%;
-            height: 80%;
+            height: 60%;
 
-            background: url('../images/baexang_top_h.svg') no-repeat top center;
-            background-size: cover;
+            border: 3px solid rgba(0, 0, 0, 0.05);
 
+            filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
 
-            &:hover .po1-focus-wrap {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 1;
-            }
-
-            .po1-focus-wrap {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) scale(0.65);
+            .po1 {
+                position: relative;
                 display: block;
-                width: 500px;
-                height: 600px;
+                width: 100%;
+                height: 80%;
 
-                z-index: 999;
                 overflow-y: auto;
-
-                opacity: 0;
-
-                transition: all 0.5s ease-out;
-
-                &::-webkit-scrollbar {
-                    width: 10px;
-                    opacity: 0;
-                }
-
-                &::-webkit-scrollbar-track {
-                    top: 10px;
-                    left: -10px;
-                    opacity: 0;
-                }
-
-                &::-webkit-scrollbar-thumb {
-                    background-color: rgba($color: $main-color, $alpha: 0.7);
-                    border-radius: 10px;
-                    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-                }
 
                 a {
                     position: relative;
@@ -382,181 +330,149 @@ $main-color: #29306A;
                         width: 100%;
                     }
                 }
+
             }
-        }
 
 
-        .po2 {
-            position: relative;
-            display: block;
-            width: 100%;
-            height: 20%;
-
-            padding: 10px;
-            background-color: $main-color;
-
-            p {
+            .po2 {
                 position: relative;
                 display: block;
                 width: 100%;
+                height: 20%;
 
-                font-family: 'Noto Sans KR';
-                font-weight: 200;
-                font-size: 18px;
-                color: #fff;
+                padding: 10px;
+                background-color: $main-color;
 
-                text-align: center;
-                line-height: 65px;
+                p {
+                    position: relative;
+                    display: block;
+                    width: 100%;
 
-                transition: all 0.5s;
-            }
+                    font-weight: 200;
+                    font-size: 18px;
+                    color: #fff;
 
-            .icon-box {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                display: flex;
-                justify-content: space-between;
-                width: 300px;
+                    text-align: center;
+                    line-height: 65px;
 
-                opacity: 0;
+                    transition: all 0.5s;
+                }
 
-                transition: all 0.5s;
+                .icon-box {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: flex;
+                    justify-content: space-between;
+                    width: 300px;
 
-                li {
-                    a {
-                        position: relative;
-                        display: block;
-                        width: 40px;
-                        height: 40px;
+                    opacity: 0;
+
+                    transition: all 0.5s;
+
+                    li {
+                        a {
+                            position: relative;
+                            display: block;
+                            width: 40px;
+                            height: 40px;
+                        }
+
+                        &:nth-child(1) a {
+                            background: url('../images/icon/web_icon.svg') no-repeat center;
+                            background-size: cover;
+                        }
+
+                        &:nth-child(2) a {
+                            background: url('../images/icon/responsive_icon.svg') no-repeat center;
+                            background-size: cover;
+                        }
+
+                        &:nth-child(3) a {
+                            background: url('../images/icon/vue_icon.svg') no-repeat center;
+                            background-size: cover;
+                        }
+
+                        &:nth-child(4) a {
+                            background: url('../images/icon/github_icon.svg') no-repeat center;
+                            background-size: cover;
+                        }
+
+                        &:nth-child(5) a {
+                            background: url('../images/icon/chrome_icon.svg') no-repeat center;
+                            background-size: cover;
+                        }
+
+                        &:nth-child(6) a {
+                            background: url('../images/icon/figma_Navy_icon.svg') no-repeat center;
+                            background-size: cover;
+                        }
                     }
+                }
 
-                    &:nth-child(1) a {
-                        background: url('../images/icon/web_icon.svg') no-repeat center;
-                        background-size: cover;
-                    }
+                &:hover p {
+                    opacity: 0;
+                }
 
-                    &:nth-child(2) a {
-                        background: url('../images/icon/responsive_icon.svg') no-repeat center;
-                        background-size: cover;
-                    }
-
-                    &:nth-child(3) a {
-                        background: url('../images/icon/vue_icon.svg') no-repeat center;
-                        background-size: cover;
-                    }
-
-                    &:nth-child(4) a {
-                        background: url('../images/icon/github_icon.svg') no-repeat center;
-                        background-size: cover;
-                    }
-
-                    &:nth-child(5) a {
-                        background: url('../images/icon/chrome_icon.svg') no-repeat center;
-                        background-size: cover;
-                    }
-
-                    &:nth-child(6) a {
-                        background: url('../images/icon/figma_Navy_icon.svg') no-repeat center;
-                        background-size: cover;
-                    }
+                &:hover .icon-box {
+                    opacity: 1;
                 }
             }
 
-            &:hover p {
-                opacity: 0;
+
+            &::before {
+                content: '01';
+                position: absolute;
+                top: -30px;
+                right: 0;
+                display: block;
+
+                font-size: 22px;
+                color: #000;
             }
 
-            &:hover .icon-box {
-                opacity: 1;
+            &::after {
+                content: 'Lorem ipsum dolor sit amet.';
+                position: absolute;
+                top: 80px;
+                right: -140px;
+                display: block;
+
+                font-size: 20px;
+                color: #000;
+
+                transform: rotate(90deg);
             }
+
         }
-
-
-        &::before {
-            content: '01';
-            position: absolute;
-            top: -30px;
-            right: 0;
-            display: block;
-
-            font-size: 22px;
-            color: #000;
-        }
-
-        &::after {
-            content: 'Lorem ipsum dolor sit amet.';
-            position: absolute;
-            top: 80px;
-            right: -140px;
-            display: block;
-
-            font-size: 20px;
-            color: #000;
-
-            transform: rotate(90deg);
-        }
-
     }
-}
 
+    .ptptpt2 {
+        top: 500px;
+        left: 800px;
+    }
 
+    .ptptpt3 {
+        top: 100px;
+        left: 1300px;
+    }
 
-.ptptpt2 {
-    top: 500px;
-    left: 800px;
+    .ptptpt4 {
+        top: 1150px;
+        left: 480px;
+    }
 
-    .popopo {
-        .po1 {
-            background: url('../images/oska-product_home.png') no-repeat top center;
-            background-size: cover;
-        }
+    .ptptpt5 {
+        top: 1000px;
+        left: 1200px;
     }
 
 }
 
-.ptptpt3 {
-    top: 100px;
-    left: 1300px;
-
-    .popopo {
-        .po1 {
-            background: url('../images/twosome_home.svg') no-repeat top center;
-            background-size: cover;
-        }
-    }
-}
-
-.ptptpt4 {
-    top: 1150px;
-    left: 480px;
-
-    .popopo {
-        .po1 {
-            background: url('../images/jugyug_home.png') no-repeat top center;
-            background-size: cover;
-        }
-    }
-}
-
-.ptptpt5 {
-    top: 1000px;
-    left: 1200px;
-
-    .popopo {
-        .po1 {
-            background: url('../images/ormak_home.png') no-repeat top center;
-            background-size: cover;
-        }
-    }
-}
-
-// 스터디클론
-.study-clone {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+// 웹 퍼블리싱
+.portfolio-part_2 {
+    position: relative;
     display: block;
     width: 100%;
     height: 1000px;
@@ -572,13 +488,15 @@ $main-color: #29306A;
         background-color: $main-color;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+        border-radius: 0 10px 10px 0;
+
         span {
             position: absolute;
             top: 15px;
-            right: 80px;
+            right: 70px;
             display: inline-block;
 
-            font-family: 'Ibarra Real Nova';
+            font-family: 'RIDIBatang';
             font-style: normal;
             font-weight: 500;
             font-size: 36px;
@@ -599,7 +517,6 @@ $main-color: #29306A;
         width: 1300px;
         height: 375px;
 
-        background-color: #333;
         filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
 
         &-slide_wrap {
@@ -634,7 +551,6 @@ $main-color: #29306A;
                     transform: translate(-50%, -50%);
                     display: inline-block;
 
-                    font-family: 'Noto Sans KR';
                     font-style: normal;
                     font-weight: 100;
                     font-size: 18px;
@@ -692,6 +608,60 @@ $main-color: #29306A;
 
 }
 
+// 스킬
+.portfolio-part_skill {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 900px;
+
+    background-color: rgba($color: #333, $alpha: 0.2);
+
+    .sample5 {
+        position: absolute;
+        display: block;
+        width: 450px;
+        height: 400px;
+
+        background-color: #C4DDED;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+
+        span {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+
+            font-family: 'Cafe24Oneprettynight';
+            font-size: 30px;
+            white-space: nowrap;
+        }
+    }
+
+    .son1 {
+        top: 120px;
+        left: 400px;
+    }
+    .son2 {
+        top: 10px;
+        right: 550px;
+
+        width: 325px;
+        height: 340px;
+    }
+    .son3 {
+        bottom: 110px;
+        right: 615px;
+
+        width: 300px;
+        height: 350px;
+    }
+
+}
+
+
 
 /* ===== ///Portfolio ===== */
 
@@ -701,7 +671,6 @@ $main-color: #29306A;
 .down-go {
     animation: down-go 1s 1 ease-out;
     animation-fill-mode: forwards;
-    opacity: 1;
 }
 
 @keyframes down-go {
