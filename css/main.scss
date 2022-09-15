@@ -211,7 +211,7 @@ $main-color: #29306A;
             left: 100px;
             display: block;
 
-            font-family: 'NanumSquareRound';
+            font-family: 'Cafe24Oneprettynight';
             font-size: 140px;
         }
 
@@ -221,7 +221,7 @@ $main-color: #29306A;
             left: 200px;
             display: block;
 
-            font-family: 'NanumSquareRound';
+            font-family: 'Cafe24Oneprettynight';
             font-size: 70px;
 
             span {
@@ -496,7 +496,7 @@ $main-color: #29306A;
             right: 70px;
             display: inline-block;
 
-            font-family: 'RIDIBatang';
+            font-family: 'Cafe24Oneprettynight';
             font-style: normal;
             font-weight: 500;
             font-size: 36px;
@@ -551,6 +551,7 @@ $main-color: #29306A;
                     transform: translate(-50%, -50%);
                     display: inline-block;
 
+                    font-family: 'Cafe24Oneprettynight';
                     font-style: normal;
                     font-weight: 100;
                     font-size: 18px;
@@ -617,46 +618,121 @@ $main-color: #29306A;
 
     background-color: rgba($color: #333, $alpha: 0.2);
 
+    .skil_bg1 {
+        position: absolute;
+        top: 27%;
+        display: block;
+        width: 100%;
+        height: 50px;
+
+        background-color: rgba($color: $main-color, $alpha: 0.6);
+    }
+    .skil_bg2 {
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 100%;
+        height: 100px;
+
+        background-color: rgba($color: $main-color, $alpha: 0.8);
+    }
+
     .sample5 {
         position: absolute;
         display: block;
         width: 450px;
-        height: 400px;
+        // height: 400px;
 
-        background-color: #C4DDED;
+        background-color: #fff;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
         border-radius: 30px;
 
-        span {
-            position: absolute;
-            top: 5%;
-            left: 50%;
-            transform: translateX(-50%);
-            display: inline-block;
+        padding: 0 2% 30px;
+
+        transition: all 0.5s;
+
+        &:hover {
+            transform: translateY(-2%);
+        }
+
+        h3 {
+            position: relative;
+            display: block;
+            height: 80px;
 
             font-family: 'Cafe24Oneprettynight';
             font-size: 30px;
+            line-height: 80px;
             white-space: nowrap;
+            text-align: center;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 10%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 80%;
+                height: 1px;
+
+                background-color: rgba($color: #333, $alpha: 0.8);
+
+            }
+        }
+
+        ul {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                padding: 10px 0;
+
+                img {
+                    position: relative;
+                    display: inline-block;
+                }
+            }
         }
     }
 
     .son1 {
         top: 120px;
-        left: 400px;
+        left: 500px;
+
+        .scss {
+            height: 100px;
+        }
+        .vue {
+            height: 100px;
+        }
     }
     .son2 {
-        top: 10px;
+        top: 100px;
         right: 550px;
 
         width: 325px;
-        height: 340px;
+
+        .git {
+            width: 150px;
+        }
+        .github {
+            width: 200px;
+        }
     }
     .son3 {
-        bottom: 110px;
-        right: 615px;
+        bottom: 100px;
+        right: 600px;
 
         width: 300px;
-        height: 350px;
+
+        .figma {
+            width: 200px;
+        }
+        .notion {
+            width: 200px;
+        }
     }
 
 }
