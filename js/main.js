@@ -27,8 +27,10 @@ window.onload = function () {
         });
     }
 
-    //  ani
-    MyWaypoint($('.pf_bg_1'), 'down-go', '10%', 0);
+    //  ani 
+
+    MyWaypoint($('.pf_bg_1'), 'down-go', '10%', 0); // pf_bg
+    MyWaypoint($('.headerBox'), 'togolong', '50%', 0); // headerBox
 
 
     // swiper

@@ -25,6 +25,23 @@ img {
 
 html {
     font-size: 16px;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        opacity: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+        top: 10px;
+        left: -10px;
+        opacity: 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba($color: $main-color, $alpha: 0.7);
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
 }
 
 body {
@@ -54,6 +71,8 @@ $main-color: #29306A;
     width: 100%;
 
     overflow: hidden;
+
+
 }
 
 
@@ -312,8 +331,60 @@ $main-color: #29306A;
             background: url('../images/baexang_top_h.svg') no-repeat top center;
             background-size: cover;
 
-            
+
+            &:hover .po1-focus-wrap {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+
+            .po1-focus-wrap {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0.65);
+                display: block;
+                width: 500px;
+                height: 600px;
+
+                z-index: 999;
+                overflow-y: auto;
+
+                opacity: 0;
+
+                transition: all 0.5s ease-out;
+
+                &::-webkit-scrollbar {
+                    width: 10px;
+                    opacity: 0;
+                }
+
+                &::-webkit-scrollbar-track {
+                    top: 10px;
+                    left: -10px;
+                    opacity: 0;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: rgba($color: $main-color, $alpha: 0.7);
+                    border-radius: 10px;
+                    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                }
+
+                a {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
         }
+
 
         .po2 {
             position: relative;
@@ -329,12 +400,15 @@ $main-color: #29306A;
                 display: block;
                 width: 100%;
 
-                // font-family: 'Noto Sans KR';
+                font-family: 'Noto Sans KR';
+                font-weight: 200;
                 font-size: 18px;
                 color: #fff;
 
                 text-align: center;
-                line-height: 60px;
+                line-height: 65px;
+
+                transition: all 0.5s;
             }
 
             .icon-box {
@@ -345,6 +419,10 @@ $main-color: #29306A;
                 display: flex;
                 justify-content: space-between;
                 width: 300px;
+
+                opacity: 0;
+
+                transition: all 0.5s;
 
                 li {
                     a {
@@ -384,10 +462,17 @@ $main-color: #29306A;
                         background-size: cover;
                     }
                 }
+            }
 
+            &:hover p {
+                opacity: 0;
+            }
 
+            &:hover .icon-box {
+                opacity: 1;
             }
         }
+
 
         &::before {
             content: '01';
@@ -415,6 +500,8 @@ $main-color: #29306A;
 
     }
 }
+
+
 
 .ptptpt2 {
     top: 500px;
@@ -477,18 +564,13 @@ $main-color: #29306A;
 
     .headerBox {
         position: absolute;
+        left: -1000px;
         display: block;
         width: 1000px;
         height: 80px;
 
         background-color: $main-color;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-        animation-name: togolong;
-        animation-duration: 1.5s;
-        animation-iteration-count: infinite;
-        // animation-fill-mode: forwards;
-
 
         span {
             position: absolute;
@@ -504,14 +586,7 @@ $main-color: #29306A;
             color: #FFFFFF;
         }
 
-        @keyframes togolong {
-            0% {
-                left: -1000px;
-            }
-            100% {
-                left: 0;
-            }
-        }
+
     }
 
 
@@ -580,7 +655,7 @@ $main-color: #29306A;
                 width: 170px;
                 height: 150px;
 
-                
+
 
                 &::before {
                     content: "";
@@ -606,6 +681,7 @@ $main-color: #29306A;
             &:hover .titleBox {
                 top: 15%;
             }
+
             &:hover .infoBox::before {
                 transform: scaleX(1);
             }
@@ -637,5 +713,22 @@ $main-color: #29306A;
 
     50% {
         opacity: 1;
+    }
+}
+
+.togolong {
+    animation-name: togolong;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes togolong {
+    0% {
+        left: -1000px;
+    }
+
+    100% {
+        left: 0;
     }
 }

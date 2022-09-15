@@ -33,6 +33,20 @@ body {
   width: 100%;
   overflow: hidden;
 }
+.wrap::-webkit-scrollbar {
+  width: 10px;
+  opacity: 0;
+}
+.wrap::-webkit-scrollbar-track {
+  top: 10px;
+  left: -10px;
+  opacity: 0;
+}
+.wrap::-webkit-scrollbar-thumb {
+  background-color: rgba(41, 48, 106, 0.7);
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
 
 .sample1 {
   position: absolute;
@@ -240,6 +254,48 @@ body {
   background: url("../images/baexang_top_h.svg") no-repeat top center;
   background-size: cover;
 }
+.sample2 .popopo .po1:hover .po1-focus-wrap {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.sample2 .popopo .po1 .po1-focus-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.65);
+  display: block;
+  width: 500px;
+  height: 600px;
+  z-index: 999;
+  overflow-y: auto;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+.sample2 .popopo .po1 .po1-focus-wrap::-webkit-scrollbar {
+  width: 10px;
+  opacity: 0;
+}
+.sample2 .popopo .po1 .po1-focus-wrap::-webkit-scrollbar-track {
+  top: 10px;
+  left: -10px;
+  opacity: 0;
+}
+.sample2 .popopo .po1 .po1-focus-wrap::-webkit-scrollbar-thumb {
+  background-color: rgba(41, 48, 106, 0.7);
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.sample2 .popopo .po1 .po1-focus-wrap a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.sample2 .popopo .po1 .po1-focus-wrap a img {
+  position: relative;
+  display: block;
+  width: 100%;
+}
 .sample2 .popopo .po2 {
   position: relative;
   display: block;
@@ -252,10 +308,13 @@ body {
   position: relative;
   display: block;
   width: 100%;
+  font-family: "Noto Sans KR";
+  font-weight: 200;
   font-size: 18px;
   color: #fff;
   text-align: center;
-  line-height: 60px;
+  line-height: 65px;
+  transition: all 0.5s;
 }
 .sample2 .popopo .po2 .icon-box {
   position: absolute;
@@ -265,6 +324,8 @@ body {
   display: flex;
   justify-content: space-between;
   width: 300px;
+  opacity: 0;
+  transition: all 0.5s;
 }
 .sample2 .popopo .po2 .icon-box li a {
   position: relative;
@@ -295,6 +356,12 @@ body {
 .sample2 .popopo .po2 .icon-box li:nth-child(6) a {
   background: url("../images/icon/figma_Navy_icon.svg") no-repeat center;
   background-size: cover;
+}
+.sample2 .popopo .po2:hover p {
+  opacity: 0;
+}
+.sample2 .popopo .po2:hover .icon-box {
+  opacity: 1;
 }
 .sample2 .popopo::before {
   content: "01";
@@ -363,17 +430,12 @@ body {
 }
 .study-clone .headerBox {
   position: absolute;
+  left: -1000px;
   display: block;
   width: 1000px;
   height: 80px;
   background-color: #29306A;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -webkit-animation-name: togolong;
-          animation-name: togolong;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
 }
 .study-clone .headerBox span {
   position: absolute;
@@ -386,22 +448,6 @@ body {
   font-size: 36px;
   line-height: 45px;
   color: #FFFFFF;
-}
-@-webkit-keyframes togolong {
-  0% {
-    left: -1000px;
-  }
-  100% {
-    left: 0;
-  }
-}
-@keyframes togolong {
-  0% {
-    left: -1000px;
-  }
-  100% {
-    left: 0;
-  }
 }
 .study-clone .sw_study_img {
   position: absolute;
@@ -508,5 +554,33 @@ body {
   }
   50% {
     opacity: 1;
+  }
+}
+.togolong {
+  -webkit-animation-name: togolong;
+          animation-name: togolong;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes togolong {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes togolong {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0;
   }
 }/*# sourceMappingURL=main.css.map */
