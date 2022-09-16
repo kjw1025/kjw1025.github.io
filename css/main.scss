@@ -307,6 +307,8 @@ $main-color: #29306A;
             height: 60%;
 
             border: 3px solid rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
 
             filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
 
@@ -509,13 +511,23 @@ $main-color: #29306A;
 
 
     // img
+    .sw_study-wrap {
+        position: relative;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 1400px;
+
+        background-color: #fff;
+        border-radius: 20px;
+        filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+        padding: 50px;
+    }
     .sw_study_img {
-        position: absolute;
-        top: 150px;
-        left: 300px;
+        position: relative;
         display: block;
         width: 1300px;
-        height: 375px;
 
         filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
 
@@ -523,7 +535,10 @@ $main-color: #29306A;
             position: relative;
             display: block;
             width: 300px;
-            height: 100%;
+            height: 375px;
+
+            border-radius: 10px;
+            overflow: hidden;
 
             img {
                 width: 100%;
@@ -536,13 +551,17 @@ $main-color: #29306A;
                 transform: translate(-50%, -50%);
                 display: block;
                 width: 225px;
-                height: 38px;
+                height: 45px;
 
                 background: rgba(50, 74, 94, 0.9);
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 border-radius: 10px;
 
-                transition: all 0.5s;
+                overflow: hidden;
+                
+                transform-origin: 50% 0;
+                transition-duration: 0.3s;
+                // transition-timing-function: ease-out;
 
                 span {
                     position: absolute;
@@ -558,50 +577,44 @@ $main-color: #29306A;
                     line-height: 26px;
                     text-align: center;
                     color: #FFFFFF;
-
                     white-space: nowrap;
+
+                    transition: all 0.3s;
                 }
             }
 
             .infoBox {
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                display: block;
-                width: 170px;
-                height: 150px;
+                top: 80px;
+                display: flex;
+                justify-content: space-between;
+                width: 200px;
 
+                transition: all 0.3s;
 
+                li {
+                    a {
+                        font-family: 'Cafe24Oneprettynight';
+                        font-size: 22px;
+                        color: #fff;
 
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
+                        transition: all 0.3s;
 
-                    background: rgba(50, 74, 94, 0.95);
-                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-                    transform: scaleX(0);
-                    transform-origin: 0 50%;
-                    transition-duration: 0.4s;
-                    transition-timing-function: ease-out;
-
-                    transition-delay: 1s;
+                        &:hover {
+                            color: teal;
+                        }
+                    }
                 }
             }
 
             // ani
+            &:hover span {
+                top: 17%;
+            }
             &:hover .titleBox {
-                top: 15%;
+                height: 150px;
             }
 
-            &:hover .infoBox::before {
-                transform: scaleX(1);
-            }
         }
     }
 

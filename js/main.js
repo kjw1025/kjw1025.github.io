@@ -55,7 +55,10 @@ window.onload = function () {
 
     // study swiper img
     let swStudy_Img = new Swiper('.sw_study_img', {
-        slidesPerView: 4
+        loop: true,
+        autoplay: true,
+        slidesPerView: 4,
+        spaceBetween: 30
     });
 
 

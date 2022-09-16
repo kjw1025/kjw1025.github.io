@@ -235,6 +235,8 @@ body {
   width: 100%;
   height: 60%;
   border: 3px solid rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
   filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .portfolio-part_1 .sample2 .popopo .po1 {
@@ -386,20 +388,31 @@ body {
   line-height: 45px;
   color: #FFFFFF;
 }
+.portfolio-part_2 .sw_study-wrap {
+  position: relative;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 1400px;
+  background-color: #fff;
+  border-radius: 20px;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+  padding: 50px;
+}
 .portfolio-part_2 .sw_study_img {
-  position: absolute;
-  top: 150px;
-  left: 300px;
+  position: relative;
   display: block;
   width: 1300px;
-  height: 375px;
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
 }
 .portfolio-part_2 .sw_study_img-slide_wrap {
   position: relative;
   display: block;
   width: 300px;
-  height: 100%;
+  height: 375px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .portfolio-part_2 .sw_study_img-slide_wrap img {
   width: 100%;
@@ -411,11 +424,13 @@ body {
   transform: translate(-50%, -50%);
   display: block;
   width: 225px;
-  height: 38px;
+  height: 45px;
   background: rgba(50, 74, 94, 0.9);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  transition: all 0.5s;
+  overflow: hidden;
+  transform-origin: 50% 0;
+  transition-duration: 0.3s;
 }
 .portfolio-part_2 .sw_study_img-slide_wrap .titleBox span {
   position: absolute;
@@ -431,36 +446,30 @@ body {
   text-align: center;
   color: #FFFFFF;
   white-space: nowrap;
+  transition: all 0.3s;
 }
 .portfolio-part_2 .sw_study_img-slide_wrap .infoBox {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 170px;
-  height: 150px;
+  top: 80px;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  transition: all 0.3s;
 }
-.portfolio-part_2 .sw_study_img-slide_wrap .infoBox::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(50, 74, 94, 0.95);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-out;
-  transition-delay: 1s;
+.portfolio-part_2 .sw_study_img-slide_wrap .infoBox li a {
+  font-family: "Cafe24Oneprettynight";
+  font-size: 22px;
+  color: #fff;
+  transition: all 0.3s;
+}
+.portfolio-part_2 .sw_study_img-slide_wrap .infoBox li a:hover {
+  color: teal;
+}
+.portfolio-part_2 .sw_study_img-slide_wrap:hover span {
+  top: 17%;
 }
 .portfolio-part_2 .sw_study_img-slide_wrap:hover .titleBox {
-  top: 15%;
-}
-.portfolio-part_2 .sw_study_img-slide_wrap:hover .infoBox::before {
-  transform: scaleX(1);
+  height: 150px;
 }
 
 .portfolio-part_skill {
