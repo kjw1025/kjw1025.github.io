@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: "Ibarra Real Nova", "NanumSquareRound";
+  font-family: "Cafe24Oneprettynight", "NanumSquareRound", "Ibarra Real Nova";
 }
 
 .wrap {
@@ -32,6 +32,42 @@ body {
   display: block;
   width: 100%;
   overflow: hidden;
+}
+
+.inner {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 1400px;
+}
+
+section {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.main-title {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-family: "Cafe24Oneprettynight";
+  font-size: 130px;
+  font-weight: 600;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.base_box {
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
 }
 
 .sample1 {
@@ -70,8 +106,6 @@ body {
 
 /* ===== Home ===== */
 .home {
-  position: relative;
-  display: block;
   width: 100vw;
   height: 100vh;
 }
@@ -80,6 +114,7 @@ body {
   top: 75px;
   left: 95px;
   display: inline-block;
+  font-family: "Ibarra Real Nova";
   font-size: 32px;
   font-weight: bold;
 }
@@ -101,6 +136,7 @@ body {
   display: block;
   width: 600px;
   z-index: 99;
+  font-family: "Ibarra Real Nova";
 }
 .home .homeNav ul {
   position: relative;
@@ -187,10 +223,103 @@ body {
 }
 
 /* ===== /// Home ===== */
-/* ===== Portfolio ===== */
-.portfolio {
+/* ===== About ===== */
+.About_Me {
+  height: 700px;
+}
+.About_Me::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background: rgba(255, 240, 0, 0.1);
+  filter: blur(75px);
+}
+.About_Me .about-left {
+  position: absolute;
+  left: 15%;
+  display: inline-block;
+  border-radius: 20px;
+}
+.About_Me .about-left .about_img {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 300px;
+  height: 300px;
+  background: url("../images/sample_img_1.svg") no-repeat center;
+  background-size: cover;
+  border: 3px solid rgba(41, 48, 106, 0.25);
+  border-radius: 10px;
+}
+.About_Me .about-left p {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  display: block;
+  width: 100%;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+}
+.About_Me .about-right {
+  position: absolute;
+  right: 15%;
+  display: inline-block;
+  width: 550px;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+}
+.About_Me .about-right::before {
+  content: "";
+  position: absolute;
+  top: -200px;
+  left: -210px;
+  display: block;
+  width: 850px;
+  height: 850px;
+  background: url("../images/paint_smear_1.svg") no-repeat center;
+  background-size: cover;
+  opacity: 1;
+  z-index: -1;
+}
+.About_Me .about-right ul {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.About_Me .about-right ul li {
   position: relative;
   display: block;
+  width: 50%;
+}
+.About_Me .about-right ul li h4 {
+  position: relative;
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 10px 0;
+}
+.About_Me .about-right ul li p {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  padding-left: 10px;
+}
+.About_Me .about-right ul li:last-child {
+  width: 100%;
+}
+
+/* ===== ///About ===== */
+/* ===== Portfolio ===== */
+.portfolio {
   width: 100%;
 }
 
@@ -202,14 +331,13 @@ body {
 }
 .portfolio-part_1 .pf_bg_1 {
   position: absolute;
-  top: 0px;
-  left: 150px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: block;
-  width: 1700px;
-  height: 1700px;
-  background: url("../images/paint_smear_0.svg") no-repeat center;
-  background-size: cover;
-  opacity: 0;
+  background: rgba(48, 148, 161, 0.5);
+  filter: blur(100px);
 }
 .portfolio-part_1 .sample2 {
   position: absolute;
@@ -269,6 +397,7 @@ body {
   position: relative;
   display: block;
   width: 100%;
+  font-family: "NanumSquareRound";
   font-weight: 200;
   font-size: 18px;
   color: #fff;
@@ -363,7 +492,7 @@ body {
   position: relative;
   display: block;
   width: 100%;
-  height: 1000px;
+  height: 800px;
   background-color: rgba(0, 0, 0, 0.05);
 }
 .portfolio-part_2 .headerBox {
@@ -472,12 +601,55 @@ body {
   height: 150px;
 }
 
+.portfolio-part_3 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2000px;
+  background-color: rgba(51, 51, 51, 0.1);
+}
+.portfolio-part_3 .headerBox {
+  position: absolute;
+  right: -1100px;
+  display: block;
+  width: 1100px;
+  height: 80px;
+  background-color: #29306A;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px 0 0 10px;
+}
+.portfolio-part_3 .headerBox span {
+  position: absolute;
+  top: 15px;
+  left: 70px;
+  display: inline-block;
+  font-family: "Cafe24Oneprettynight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 45px;
+  color: #FFFFFF;
+}
+.portfolio-part_3 .sample6 {
+  width: 650px;
+  height: 700px;
+}
+.portfolio-part_3 .roro1 {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+}
+.portfolio-part_3 .roro2 {
+  position: absolute;
+  bottom: 10%;
+  right: 25%;
+}
+
 .portfolio-part_skill {
   position: relative;
   display: block;
   width: 100%;
   height: 900px;
-  background-color: rgba(51, 51, 51, 0.2);
 }
 .portfolio-part_skill .skil_bg1 {
   position: absolute;
@@ -602,9 +774,9 @@ body {
     opacity: 1;
   }
 }
-.togolong {
-  -webkit-animation-name: togolong;
-          animation-name: togolong;
+.togolong-left {
+  -webkit-animation-name: togolong-left;
+          animation-name: togolong-left;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
   -webkit-animation-iteration-count: 1;
@@ -613,7 +785,7 @@ body {
           animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes togolong {
+@-webkit-keyframes togolong-left {
   0% {
     left: -1000px;
   }
@@ -622,11 +794,39 @@ body {
   }
 }
 
-@keyframes togolong {
+@keyframes togolong-left {
   0% {
     left: -1000px;
   }
   100% {
     left: 0;
+  }
+}
+.togolong-right {
+  -webkit-animation-name: togolong-right;
+          animation-name: togolong-right;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes togolong-right {
+  0% {
+    right: -1100px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes togolong-right {
+  0% {
+    right: -1100px;
+  }
+  100% {
+    right: 0;
   }
 }/*# sourceMappingURL=main.css.map */

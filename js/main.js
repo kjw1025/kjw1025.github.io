@@ -47,8 +47,9 @@ window.onload = function () {
 
     //  ani 
 
-    MyWaypoint($('.pf_bg_1'), 'down-go', '10%', 0); // pf_bg
-    MyWaypoint($('.headerBox'), 'togolong', '50%', 0); // headerBox
+    // MyWaypoint($('.pf_bg_1'), 'down-go', '10%', 0); // pf_bg
+    MyWaypoint($('.portfolio-part_2 .headerBox'), 'togolong-left', '70%', 0); // headerBox
+    MyWaypoint($('.portfolio-part_3 .headerBox'), 'togolong-right', '70%', 0); // headerBox
 
 
     // swiper
@@ -58,7 +59,8 @@ window.onload = function () {
         loop: true,
         autoplay: true,
         slidesPerView: 4,
-        spaceBetween: 30
+        spaceBetween: 30,
+        speed: 1400
     });
 
 
