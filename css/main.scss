@@ -28,7 +28,7 @@ html {
 }
 
 body {
-    font-family: 'Cafe24Oneprettynight', 'NanumSquareRound', 'Ibarra Real Nova';
+    font-family: 'HallymGothic-Regular','NanumSquareRound', 'Ibarra Real Nova';
 }
 
 
@@ -76,8 +76,7 @@ section {
     display: block;
     width: 100%;
 
-    font-family: 'Cafe24Oneprettynight';
-    font-size: 130px;
+    font-size: 100px;
     font-weight: 600;
     text-align: center;
     padding: 30px 0;
@@ -234,39 +233,41 @@ section {
     }
 
     // Home-left
-    .home-left {
+    .home-main {
         position: relative;
         top: 0;
         left: 0;
         display: block;
-        width: 50%;
+        width: 70%;
         height: 100%;
         padding: 50px;
 
         strong {
             position: relative;
-            top: 300px;
-            left: 100px;
+            top: 200px;
+            left: 300px;
             display: block;
 
-            font-family: 'Cafe24Oneprettynight';
-            font-size: 140px;
+            font-size: 100px;
+            font-weight: 800;
+            letter-spacing: 10px;
+            line-height: 1.2;
+            color: #111;
         }
 
         p {
             position: relative;
-            top: 350px;
-            left: 200px;
+            top: 250px;
+            left: 500px;
             display: block;
 
-            font-family: 'Cafe24Oneprettynight';
-            font-size: 70px;
+            font-size: 50px;
 
             span {
                 position: relative;
                 display: inline-block;
 
-                font-weight: 600;
+                font-weight: 700;
                 line-height: 100px;
                 color: $main-color;
             }
@@ -301,20 +302,22 @@ section {
         right: 0;
         display: block;
 
-        background: rgba(255, 240, 0, 0.1);
+        // background-color: rgba($color: $main-color, $alpha: 0.05);
         filter: blur(75px);
     }
 
     .about-left {
         position: absolute;
-        left: 15%;
+        left: 10%;
         display: inline-block;
+        width: 400px;
+        height: 500px;
 
         border-radius: 20px;
 
         .about_img {
             position: absolute;
-            top: 20px;
+            top: 40px;
             left: 50%;
             transform: translateX(-50%);
             display: block;
@@ -328,14 +331,48 @@ section {
             border-radius: 10px;
         }
 
-        p {
+        ul {
+            position: absolute;
+            bottom: 17%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            li {
+                position: relative;
+                display: block;
+                padding: 0 10px;
+                h4 {
+                    position: relative;
+                    display: block;
+
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: #333;
+
+                    padding: 10px 0;
+                }
+
+                p {
+                    position: relative;
+                    display: block;
+
+                    font-size: 16px;
+                    font-weight: 600;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        strong {
             position: absolute;
             bottom: 30px;
             left: 0;
             display: block;
             width: 100%;
 
-            font-size: 25px;
+            font-size: 24px;
             font-weight: 600;
             text-align: center;
 
@@ -345,28 +382,37 @@ section {
 
     .about-right {
         position: absolute;
-        right: 15%;
+        right: 10%;
         display: inline-block;
-        width: 550px;
+        width: 700px;
+        height: 500px;
 
         border-radius: 20px;
         overflow: hidden;
 
-        padding: 20px;
+        padding: 40px;
+
+        .aboutMe_txt {
+            position: relative;
+            display: block;
+            
+            font-size: 20px;
+            line-height: 1.25;
+        }
 
         &::before {
             content: '';
             position: absolute;
-            top: -200px;
-            left: -210px;
+            top: -300px;
+            left: -150px;
             display: block;
-            width: 850px;
-            height: 850px;
+            width: 1000px;
+            height: 1000px;
 
             background: url('../images/paint_smear_1.svg') no-repeat center;
             background-size: cover;
 
-            opacity: 1;
+            opacity: 0.5;
             z-index: -1;
         }
 
@@ -385,7 +431,7 @@ section {
                     position: relative;
                     display: block;
 
-                    font-size: 30px;
+                    font-size: 25px;
                     font-weight: 700;
 
                     padding: 10px 0;
@@ -428,14 +474,14 @@ section {
 
     .pf_bg_1 {
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        left: 200px;
+        top: 200px;
         display: block;
+        width: 1700px;
+        height: 1700px;
 
-        background: rgba(48, 148, 161, 0.5);
-        filter: blur(100px);
+        background: url('../images/paint_smear_0.svg') no-repeat center;
+        background-size: cover;
     }
 
     .sample2 {
@@ -467,8 +513,6 @@ section {
 
             border: 3px solid rgba(0, 0, 0, 0.05);
             border-radius: 10px;
-            overflow: hidden;
-
             filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
 
             .po1 {
@@ -477,7 +521,7 @@ section {
                 width: 100%;
                 height: 80%;
 
-                overflow-y: auto;
+                overflow: hidden;
 
                 a {
                     position: relative;
@@ -519,67 +563,6 @@ section {
 
                     transition: all 0.5s;
                 }
-
-                .icon-box {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    display: flex;
-                    justify-content: space-between;
-                    width: 300px;
-
-                    opacity: 0;
-
-                    transition: all 0.5s;
-
-                    li {
-                        a {
-                            position: relative;
-                            display: block;
-                            width: 40px;
-                            height: 40px;
-                        }
-
-                        &:nth-child(1) a {
-                            background: url('../images/icon/web_icon.svg') no-repeat center;
-                            background-size: cover;
-                        }
-
-                        &:nth-child(2) a {
-                            background: url('../images/icon/responsive_icon.svg') no-repeat center;
-                            background-size: cover;
-                        }
-
-                        &:nth-child(3) a {
-                            background: url('../images/icon/vue_icon.svg') no-repeat center;
-                            background-size: cover;
-                        }
-
-                        &:nth-child(4) a {
-                            background: url('../images/icon/github_icon.svg') no-repeat center;
-                            background-size: cover;
-                        }
-
-                        &:nth-child(5) a {
-                            background: url('../images/icon/chrome_icon.svg') no-repeat center;
-                            background-size: cover;
-                        }
-
-                        &:nth-child(6) a {
-                            background: url('../images/icon/figma_Navy_icon.svg') no-repeat center;
-                            background-size: cover;
-                        }
-                    }
-                }
-
-                &:hover p {
-                    opacity: 0;
-                }
-
-                &:hover .icon-box {
-                    opacity: 1;
-                }
             }
 
 
@@ -590,6 +573,7 @@ section {
                 right: 0;
                 display: block;
 
+                font-family: 'Ibarra Real Nova';
                 font-size: 22px;
                 color: #000;
             }
@@ -601,6 +585,7 @@ section {
                 right: -140px;
                 display: block;
 
+                font-family: 'Ibarra Real Nova';
                 font-size: 20px;
                 color: #000;
 
@@ -645,21 +630,20 @@ section {
         left: -1000px;
         display: block;
         width: 1000px;
-        height: 80px;
+        height: 120px;
 
         background-color: $main-color;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 0 10px 10px 0;
+        border-radius: 0 30px 30px 0;
 
         span {
             position: absolute;
-            top: 15px;
+            top: 30px;
             right: 70px;
             display: inline-block;
 
-            font-family: 'Cafe24Oneprettynight';
             font-style: normal;
-            font-weight: 500;
+            font-weight: 700;
             font-size: 36px;
             line-height: 45px;
             color: #FFFFFF;
@@ -730,9 +714,8 @@ section {
                     transform: translate(-50%, -50%);
                     display: inline-block;
 
-                    font-family: 'Cafe24Oneprettynight';
                     font-style: normal;
-                    font-weight: 100;
+                    font-weight: 600;
                     font-size: 18px;
                     line-height: 26px;
                     text-align: center;
@@ -746,6 +729,8 @@ section {
             .infoBox {
                 position: absolute;
                 top: 80px;
+                left: 48%;
+                transform: translateX(-50%);
                 display: flex;
                 justify-content: space-between;
                 width: 200px;
@@ -754,8 +739,8 @@ section {
 
                 li {
                     a {
-                        font-family: 'Cafe24Oneprettynight';
-                        font-size: 22px;
+                        font-size: 18px;
+                        font-weight: 600;
                         color: #fff;
 
                         transition: all 0.3s;
@@ -797,22 +782,21 @@ section {
         right: -1100px;
         display: block;
         width: 1100px;
-        height: 80px;
+        height: 120px;
 
         background-color: $main-color;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-        border-radius: 10px 0 0 10px;
+        border-radius: 30px 0 0 30px;
 
         span {
             position: absolute;
-            top: 15px;
+            top: 30px;
             left: 70px;
             display: inline-block;
 
-            font-family: 'Cafe24Oneprettynight';
             font-style: normal;
-            font-weight: 500;
+            font-weight: 700;
             font-size: 36px;
             line-height: 45px;
             color: #FFFFFF;
@@ -843,27 +827,6 @@ section {
     width: 100%;
     height: 900px;
 
-
-    .skil_bg1 {
-        position: absolute;
-        top: 27%;
-        display: block;
-        width: 100%;
-        height: 50px;
-
-        background-color: rgba($color: $main-color, $alpha: 0.6);
-    }
-
-    .skil_bg2 {
-        position: absolute;
-        top: 50%;
-        display: block;
-        width: 100%;
-        height: 100px;
-
-        background-color: rgba($color: $main-color, $alpha: 0.8);
-    }
-
     .sample5 {
         position: absolute;
         display: block;
@@ -887,7 +850,6 @@ section {
             display: block;
             height: 80px;
 
-            font-family: 'Cafe24Oneprettynight';
             font-size: 30px;
             line-height: 80px;
             white-space: nowrap;

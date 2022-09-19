@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: "Cafe24Oneprettynight", "NanumSquareRound", "Ibarra Real Nova";
+  font-family: "HallymGothic-Regular", "NanumSquareRound", "Ibarra Real Nova";
 }
 
 .wrap {
@@ -53,8 +53,7 @@ section {
   position: relative;
   display: block;
   width: 100%;
-  font-family: "Cafe24Oneprettynight";
-  font-size: 130px;
+  font-size: 100px;
   font-weight: 600;
   text-align: center;
   padding: 30px 0;
@@ -181,35 +180,37 @@ section {
 .home .homeNav ul li:hover a {
   opacity: 1;
 }
-.home .home-left {
+.home .home-main {
   position: relative;
   top: 0;
   left: 0;
   display: block;
-  width: 50%;
+  width: 70%;
   height: 100%;
   padding: 50px;
 }
-.home .home-left strong {
+.home .home-main strong {
   position: relative;
-  top: 300px;
-  left: 100px;
+  top: 200px;
+  left: 300px;
   display: block;
-  font-family: "Cafe24Oneprettynight";
-  font-size: 140px;
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: 10px;
+  line-height: 1.2;
+  color: #111;
 }
-.home .home-left p {
+.home .home-main p {
   position: relative;
-  top: 350px;
-  left: 200px;
+  top: 250px;
+  left: 500px;
   display: block;
-  font-family: "Cafe24Oneprettynight";
-  font-size: 70px;
+  font-size: 50px;
 }
-.home .home-left p span {
+.home .home-main p span {
   position: relative;
   display: inline-block;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 100px;
   color: #29306A;
 }
@@ -235,18 +236,19 @@ section {
   left: 0;
   right: 0;
   display: block;
-  background: rgba(255, 240, 0, 0.1);
   filter: blur(75px);
 }
 .About_Me .about-left {
   position: absolute;
-  left: 15%;
+  left: 10%;
   display: inline-block;
+  width: 400px;
+  height: 500px;
   border-radius: 20px;
 }
 .About_Me .about-left .about_img {
   position: absolute;
-  top: 20px;
+  top: 40px;
   left: 50%;
   transform: translateX(-50%);
   display: block;
@@ -257,36 +259,72 @@ section {
   border: 3px solid rgba(41, 48, 106, 0.25);
   border-radius: 10px;
 }
-.About_Me .about-left p {
+.About_Me .about-left ul {
+  position: absolute;
+  bottom: 17%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.About_Me .about-left ul li {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+}
+.About_Me .about-left ul li h4 {
+  position: relative;
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  padding: 10px 0;
+}
+.About_Me .about-left ul li p {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.About_Me .about-left strong {
   position: absolute;
   bottom: 30px;
   left: 0;
   display: block;
   width: 100%;
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 600;
   text-align: center;
 }
 .About_Me .about-right {
   position: absolute;
-  right: 15%;
+  right: 10%;
   display: inline-block;
-  width: 550px;
+  width: 700px;
+  height: 500px;
   border-radius: 20px;
   overflow: hidden;
-  padding: 20px;
+  padding: 40px;
+}
+.About_Me .about-right .aboutMe_txt {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  line-height: 1.25;
 }
 .About_Me .about-right::before {
   content: "";
   position: absolute;
-  top: -200px;
-  left: -210px;
+  top: -300px;
+  left: -150px;
   display: block;
-  width: 850px;
-  height: 850px;
+  width: 1000px;
+  height: 1000px;
   background: url("../images/paint_smear_1.svg") no-repeat center;
   background-size: cover;
-  opacity: 1;
+  opacity: 0.5;
   z-index: -1;
 }
 .About_Me .about-right ul {
@@ -303,7 +341,7 @@ section {
 .About_Me .about-right ul li h4 {
   position: relative;
   display: block;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 700;
   padding: 10px 0;
 }
@@ -331,13 +369,13 @@ section {
 }
 .portfolio-part_1 .pf_bg_1 {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  left: 200px;
+  top: 200px;
   display: block;
-  background: rgba(48, 148, 161, 0.5);
-  filter: blur(100px);
+  width: 1700px;
+  height: 1700px;
+  background: url("../images/paint_smear_0.svg") no-repeat center;
+  background-size: cover;
 }
 .portfolio-part_1 .sample2 {
   position: absolute;
@@ -364,7 +402,6 @@ section {
   height: 60%;
   border: 3px solid rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  overflow: hidden;
   filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .portfolio-part_1 .sample2 .popopo .po1 {
@@ -372,7 +409,7 @@ section {
   display: block;
   width: 100%;
   height: 80%;
-  overflow-y: auto;
+  overflow: hidden;
 }
 .portfolio-part_1 .sample2 .popopo .po1 a {
   position: relative;
@@ -405,59 +442,13 @@ section {
   line-height: 65px;
   transition: all 0.5s;
 }
-.portfolio-part_1 .sample2 .popopo .po2 .icon-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: space-between;
-  width: 300px;
-  opacity: 0;
-  transition: all 0.5s;
-}
-.portfolio-part_1 .sample2 .popopo .po2 .icon-box li a {
-  position: relative;
-  display: block;
-  width: 40px;
-  height: 40px;
-}
-.portfolio-part_1 .sample2 .popopo .po2 .icon-box li:nth-child(1) a {
-  background: url("../images/icon/web_icon.svg") no-repeat center;
-  background-size: cover;
-}
-.portfolio-part_1 .sample2 .popopo .po2 .icon-box li:nth-child(2) a {
-  background: url("../images/icon/responsive_icon.svg") no-repeat center;
-  background-size: cover;
-}
-.portfolio-part_1 .sample2 .popopo .po2 .icon-box li:nth-child(3) a {
-  background: url("../images/icon/vue_icon.svg") no-repeat center;
-  background-size: cover;
-}
-.portfolio-part_1 .sample2 .popopo .po2 .icon-box li:nth-child(4) a {
-  background: url("../images/icon/github_icon.svg") no-repeat center;
-  background-size: cover;
-}
-.portfolio-part_1 .sample2 .popopo .po2 .icon-box li:nth-child(5) a {
-  background: url("../images/icon/chrome_icon.svg") no-repeat center;
-  background-size: cover;
-}
-.portfolio-part_1 .sample2 .popopo .po2 .icon-box li:nth-child(6) a {
-  background: url("../images/icon/figma_Navy_icon.svg") no-repeat center;
-  background-size: cover;
-}
-.portfolio-part_1 .sample2 .popopo .po2:hover p {
-  opacity: 0;
-}
-.portfolio-part_1 .sample2 .popopo .po2:hover .icon-box {
-  opacity: 1;
-}
 .portfolio-part_1 .sample2 .popopo::before {
   content: "01";
   position: absolute;
   top: -30px;
   right: 0;
   display: block;
+  font-family: "Ibarra Real Nova";
   font-size: 22px;
   color: #000;
 }
@@ -467,6 +458,7 @@ section {
   top: 80px;
   right: -140px;
   display: block;
+  font-family: "Ibarra Real Nova";
   font-size: 20px;
   color: #000;
   transform: rotate(90deg);
@@ -500,19 +492,18 @@ section {
   left: -1000px;
   display: block;
   width: 1000px;
-  height: 80px;
+  height: 120px;
   background-color: #29306A;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 30px 30px 0;
 }
 .portfolio-part_2 .headerBox span {
   position: absolute;
-  top: 15px;
+  top: 30px;
   right: 70px;
   display: inline-block;
-  font-family: "Cafe24Oneprettynight";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 36px;
   line-height: 45px;
   color: #FFFFFF;
@@ -567,9 +558,8 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   display: inline-block;
-  font-family: "Cafe24Oneprettynight";
   font-style: normal;
-  font-weight: 100;
+  font-weight: 600;
   font-size: 18px;
   line-height: 26px;
   text-align: center;
@@ -580,14 +570,16 @@ section {
 .portfolio-part_2 .sw_study_img-slide_wrap .infoBox {
   position: absolute;
   top: 80px;
+  left: 48%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   width: 200px;
   transition: all 0.3s;
 }
 .portfolio-part_2 .sw_study_img-slide_wrap .infoBox li a {
-  font-family: "Cafe24Oneprettynight";
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: 600;
   color: #fff;
   transition: all 0.3s;
 }
@@ -613,19 +605,18 @@ section {
   right: -1100px;
   display: block;
   width: 1100px;
-  height: 80px;
+  height: 120px;
   background-color: #29306A;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px 0 0 10px;
+  border-radius: 30px 0 0 30px;
 }
 .portfolio-part_3 .headerBox span {
   position: absolute;
-  top: 15px;
+  top: 30px;
   left: 70px;
   display: inline-block;
-  font-family: "Cafe24Oneprettynight";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 36px;
   line-height: 45px;
   color: #FFFFFF;
@@ -651,22 +642,6 @@ section {
   width: 100%;
   height: 900px;
 }
-.portfolio-part_skill .skil_bg1 {
-  position: absolute;
-  top: 27%;
-  display: block;
-  width: 100%;
-  height: 50px;
-  background-color: rgba(41, 48, 106, 0.6);
-}
-.portfolio-part_skill .skil_bg2 {
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 100%;
-  height: 100px;
-  background-color: rgba(41, 48, 106, 0.8);
-}
 .portfolio-part_skill .sample5 {
   position: absolute;
   display: block;
@@ -684,7 +659,6 @@ section {
   position: relative;
   display: block;
   height: 80px;
-  font-family: "Cafe24Oneprettynight";
   font-size: 30px;
   line-height: 80px;
   white-space: nowrap;
