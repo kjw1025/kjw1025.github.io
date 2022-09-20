@@ -46,7 +46,7 @@ section {
   position: relative;
   display: block;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 300px;
 }
 
 .main-title {
@@ -103,6 +103,75 @@ section {
   background-size: cover;
 }
 
+/* ===== side-menu ===== */
+.sideMenu_wrap {
+  position: fixed;
+  top: 200px;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 600px;
+  z-index: 9999;
+  transition: all 0.5s;
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
+}
+.sideMenu_wrap ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 100%;
+  padding-left: 40px;
+  border-radius: 0 10px 10px 0;
+  background-color: rgba(41, 48, 106, 0.9);
+}
+.sideMenu_wrap ul::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: block;
+  width: 2px;
+  height: 80%;
+  background-color: #fff;
+  opacity: 0.7;
+  transition: all 0.7s;
+}
+.sideMenu_wrap ul li {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+.sideMenu_wrap ul li a {
+  position: relative;
+  display: block;
+  width: 90%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  transition: all 0.5s;
+  opacity: 0.4;
+}
+.sideMenu_wrap ul li a:hover {
+  transform: translate(5%, -5%);
+  opacity: 1;
+}
+.sideMenu_wrap:hover {
+  width: 250px;
+}
+.sideMenu_wrap:hover ul::after {
+  left: 40px;
+}
+
+/* ===== /// side-menu ===== */
 /* ===== Home ===== */
 .home {
   width: 100vw;
@@ -308,12 +377,6 @@ section {
   overflow: hidden;
   padding: 40px;
 }
-.About_Me .about-right .aboutMe_txt {
-  position: relative;
-  display: block;
-  font-size: 20px;
-  line-height: 1.25;
-}
 .About_Me .about-right::before {
   content: "";
   position: absolute;
@@ -336,7 +399,7 @@ section {
 .About_Me .about-right ul li {
   position: relative;
   display: block;
-  width: 50%;
+  width: 100%;
 }
 .About_Me .about-right ul li h4 {
   position: relative;
@@ -350,6 +413,7 @@ section {
   display: block;
   font-size: 20px;
   padding-left: 10px;
+  line-height: 1.3;
 }
 .About_Me .about-right ul li:last-child {
   width: 100%;
@@ -366,6 +430,7 @@ section {
   display: block;
   width: 100%;
   height: 2000px;
+  margin-bottom: 200px;
 }
 .portfolio-part_1 .pf_bg_1 {
   position: absolute;
@@ -485,7 +550,6 @@ section {
   display: block;
   width: 100%;
   height: 800px;
-  background-color: rgba(0, 0, 0, 0.05);
 }
 .portfolio-part_2 .headerBox {
   position: absolute;
@@ -574,6 +638,7 @@ section {
   transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 200px;
   transition: all 0.3s;
 }
@@ -622,18 +687,91 @@ section {
   color: #FFFFFF;
 }
 .portfolio-part_3 .sample6 {
-  width: 650px;
-  height: 700px;
+  width: 750px;
+  height: 600px;
+  padding: 40px;
+  border-radius: 0px;
+}
+.portfolio-part_3 .sample6 .sample6Img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 70%;
+  border-radius: 20px;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+}
+.portfolio-part_3 .sample6 .sample6-txtbox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 30%;
+  padding-top: 25px;
+}
+.portfolio-part_3 .sample6 .sample6-txtbox h3 {
+  position: relative;
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+}
+.portfolio-part_3 .sample6 .sample6-txtbox p {
+  position: relative;
+  display: block;
+}
+.portfolio-part_3 .sample6 .sample6-txtbox ul {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.portfolio-part_3 .sample6 .sample6-txtbox ul li {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  background-color: #37abe0;
+  border-radius: 50px;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+.portfolio-part_3 .sample6 .sample6-txtbox ul li a {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+.portfolio-part_3 .sample6 .sample6-txtbox ul li:hover {
+  transform: scale(1.1);
+  background-color: #29306A;
 }
 .portfolio-part_3 .roro1 {
   position: absolute;
   top: 10%;
-  left: 25%;
+  left: 10%;
+}
+.portfolio-part_3 .roro1 .sample6Img {
+  background: url("../images/ghibli_home.svg") no-repeat center top;
+  background-size: cover;
+  transition: all 1s;
+}
+.portfolio-part_3 .roro1 .sample6Img:hover {
+  background: url("../images/ghibli_active.svg") no-repeat center top;
+  background-size: cover;
 }
 .portfolio-part_3 .roro2 {
   position: absolute;
-  bottom: 10%;
-  right: 25%;
+  top: 15%;
+  right: 10%;
+}
+.portfolio-part_3 .roro2 .sample6Img {
+  background: url("../images/myMemo_home.svg") no-repeat center top;
+  background-size: cover;
+  transition: all 0.3s;
+}
+.portfolio-part_3 .roro2 .sample6Img:hover {
+  transform: scale(1.05);
 }
 
 .portfolio-part_skill {
