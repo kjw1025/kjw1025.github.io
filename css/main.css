@@ -115,6 +115,7 @@ section {
   transition: all 0.5s;
   overflow: hidden;
   border-radius: 0 10px 10px 0;
+  opacity: 0;
 }
 .sideMenu_wrap ul {
   position: relative;
@@ -169,6 +170,10 @@ section {
 }
 .sideMenu_wrap:hover ul::after {
   left: 40px;
+}
+
+.sideMenu_wrap_on {
+  opacity: 1;
 }
 
 /* ===== /// side-menu ===== */
@@ -486,6 +491,53 @@ section {
   position: relative;
   display: block;
   width: 100%;
+}
+.portfolio-part_1 .sample2 .popopo .po1 .po1_cover_wrap {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 300px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.portfolio-part_1 .sample2 .popopo .po1 .po1_cover_wrap ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 48, 106, 0.9);
+  border-radius: 15px;
+  filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.portfolio-part_1 .sample2 .popopo .po1 .po1_cover_wrap ul li {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 30px;
+}
+.portfolio-part_1 .sample2 .popopo .po1 .po1_cover_wrap ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s;
+}
+.portfolio-part_1 .sample2 .popopo .po1 .po1_cover_wrap ul li a:hover {
+  transform: scale(1.05);
+  color: #37abe0;
+}
+.portfolio-part_1 .sample2 .popopo .po1:hover .po1_cover_wrap {
+  left: 30px;
+  width: 120px;
 }
 .portfolio-part_1 .sample2 .popopo .po2 {
   position: relative;
@@ -970,6 +1022,58 @@ section {
 }
 
 /* ===== ///Life ===== */
+/* ===== Contact ===== */
+.contact {
+  background-color: #40606e;
+  margin-bottom: 0;
+}
+.contact .contact_txt {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.contact .contact_txt li {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 15px;
+}
+.contact .contact_txt li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.contact .contact_txt li:nth-child(1) {
+  background: url("../images/contact_github.svg") no-repeat center;
+  background-size: cover;
+}
+.contact .contact_txt li:nth-child(2) {
+  background: url("../images/contact_mail.svg") no-repeat center;
+  background-size: cover;
+}
+.contact .contact_txt li:nth-child(3) {
+  background: url("../images/contact_kakao.svg") no-repeat center;
+  background-size: cover;
+}
+.contact .copyright {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 160px;
+}
+.contact .copyright p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ===== ///Contact ===== */
 /* ===== animation ===== */
 .down-go {
   -webkit-animation: down-go 1s 1 ease-out;

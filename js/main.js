@@ -26,6 +26,7 @@ window.onload = function () {
     AOS.init();
 
     // waypoint 옵션
+    
     function MyWaypoint(_what, _effect, _offset, _delay) {
 
         _what.each(function (index, el) {
@@ -44,6 +45,25 @@ window.onload = function () {
 
         });
     }
+
+    // on/off
+    function MyWaypointOnOff(_fromWhere, _what, _onClass, _offset) {
+
+        new Waypoint({
+            element: _fromWhere,
+            handler: function (direction) {
+                if (direction == 'down') {
+                    _what.addClass(_onClass);
+                } else if (direction == 'up') {
+                    _what.removeClass(_onClass);
+                }
+            },
+            offset: _offset
+        });
+
+    }
+    
+    MyWaypointOnOff($('.About_Me'), $('.sideMenu_wrap'), 'sideMenu_wrap_on', '50%'); // sideMenu on/off
 
     //  ani 
 
