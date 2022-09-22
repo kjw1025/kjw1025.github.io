@@ -69,40 +69,6 @@ section {
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
 }
 
-.sample1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  box-shadow: 5px 5px 5px;
-  text-align: center;
-}
-.sample1 a {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  background: url("../images/icon/github.svg") no-repeat center;
-  background-size: cover;
-  transition: all 0.5s;
-}
-.sample1:hover a {
-  background: url("../images/icon/github.Navy.svg") no-repeat center;
-  background-size: cover;
-}
-
-.toptoptop {
-  left: 62%;
-}
-.toptoptop a {
-  background: url("../images/icon/figma_icon.svg") no-repeat center;
-  background-size: cover;
-}
-
 /* ===== side-menu ===== */
 .sideMenu_wrap {
   position: fixed;
@@ -170,6 +136,7 @@ section {
 }
 .sideMenu_wrap:hover ul::after {
   left: 40px;
+  opacity: 0;
 }
 
 .sideMenu_wrap_on {
@@ -200,7 +167,7 @@ section {
   width: 8px;
   height: 8px;
   border-radius: 3px;
-  background-color: #29306A;
+  background-color: #29306a;
 }
 .home .homeNav {
   position: absolute;
@@ -230,19 +197,20 @@ section {
 }
 .home .homeNav ul li:first-child a {
   opacity: 1;
-  color: #29306A;
+  color: #29306a;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
 .home .homeNav ul li::after {
   content: "";
   position: absolute;
-  top: -50px;
-  left: -30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: block;
-  width: 135px;
-  height: 135px;
-  background: url("../images/paint_smear_0.svg") no-repeat center;
+  width: 100px;
+  height: 100px;
+  background: url("../images/paint_1.png") no-repeat center;
   background-size: cover;
   opacity: 0;
   transition: all 0.7s;
@@ -286,7 +254,7 @@ section {
   display: inline-block;
   font-weight: 700;
   line-height: 100px;
-  color: #29306A;
+  color: #29306a;
 }
 .home .home-right {
   position: absolute;
@@ -385,12 +353,12 @@ section {
 .About_Me .about-right::before {
   content: "";
   position: absolute;
-  top: -300px;
+  top: -250px;
   left: -150px;
   display: block;
   width: 1000px;
   height: 1000px;
-  background: url("../images/paint_smear_1.svg") no-repeat center;
+  background: url("../images/paint_1.png") no-repeat center;
   background-size: cover;
   opacity: 0.5;
   z-index: -1;
@@ -444,7 +412,7 @@ section {
   display: block;
   width: 1700px;
   height: 1700px;
-  background: url("../images/paint_smear_0.svg") no-repeat center;
+  background: url("../images/paint_1.png") no-repeat center;
   background-size: cover;
 }
 .portfolio-part_1 .sample2 {
@@ -545,7 +513,7 @@ section {
   width: 100%;
   height: 20%;
   padding: 10px;
-  background-color: #29306A;
+  background-color: #29306a;
 }
 .portfolio-part_1 .sample2 .popopo .po2 p {
   position: relative;
@@ -609,7 +577,7 @@ section {
   display: block;
   width: 1000px;
   height: 120px;
-  background-color: #29306A;
+  background-color: #29306a;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0 30px 30px 0;
 }
@@ -622,7 +590,7 @@ section {
   font-weight: 700;
   font-size: 36px;
   line-height: 45px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .portfolio-part_2 .sw_study-wrap {
   position: relative;
@@ -679,7 +647,7 @@ section {
   font-size: 18px;
   line-height: 26px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   white-space: nowrap;
   transition: all 0.3s;
 }
@@ -723,7 +691,7 @@ section {
   display: block;
   width: 1100px;
   height: 120px;
-  background-color: #29306A;
+  background-color: #29306a;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px 0 0 30px;
 }
@@ -736,7 +704,7 @@ section {
   font-weight: 700;
   font-size: 36px;
   line-height: 45px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .portfolio-part_3 .sample6 {
   width: 750px;
@@ -796,7 +764,7 @@ section {
 }
 .portfolio-part_3 .sample6 .sample6-txtbox ul li:hover {
   transform: scale(1.1);
-  background-color: #29306A;
+  background-color: #29306a;
 }
 .portfolio-part_3 .roro1 {
   position: absolute;
@@ -804,12 +772,12 @@ section {
   left: 10%;
 }
 .portfolio-part_3 .roro1 .sample6Img {
-  background: url("../images/ghibli_home.svg") no-repeat center top;
+  background: url("../images/ghibli_home.png") no-repeat center top;
   background-size: cover;
   transition: all 1s;
 }
 .portfolio-part_3 .roro1 .sample6Img:hover {
-  background: url("../images/ghibli_active.svg") no-repeat center top;
+  background: url("../images/ghibli_active.png") no-repeat center top;
   background-size: cover;
 }
 .portfolio-part_3 .roro2 {
