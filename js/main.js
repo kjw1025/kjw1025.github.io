@@ -54,7 +54,7 @@ window.onload = function () {
   }
 
   MyWaypointOnOff(
-    $(".About_Me"),
+    $(".about_Me"),
     $(".sideMenu_wrap"),
     "sideMenu_wrap_on",
     "50%"

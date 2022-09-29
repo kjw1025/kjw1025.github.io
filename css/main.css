@@ -149,6 +149,17 @@ section {
   width: 100vw;
   height: 100vh;
 }
+.home .home_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/home_bg5.jpg") no-repeat center;
+  background-size: cover;
+  box-shadow: 0 3px 10px 1px #888;
+}
 .home .logo {
   position: absolute;
   top: 75px;
@@ -233,10 +244,11 @@ section {
 }
 .home .home-main strong {
   position: relative;
-  top: 200px;
+  top: 330px;
   left: 300px;
   display: block;
-  font-size: 100px;
+  font-family: "NanumSquareRound";
+  font-size: 120px;
   font-weight: 800;
   letter-spacing: 10px;
   line-height: 1.2;
@@ -244,10 +256,12 @@ section {
 }
 .home .home-main p {
   position: relative;
-  top: 250px;
+  top: 350px;
   left: 500px;
   display: block;
-  font-size: 50px;
+  font-family: "NanumSquareRound";
+  font-size: 70px;
+  color: #000;
 }
 .home .home-main p span {
   position: relative;
@@ -267,10 +281,10 @@ section {
 
 /* ===== /// Home ===== */
 /* ===== About ===== */
-.About_Me {
+.about_Me {
   height: 700px;
 }
-.About_Me::before {
+.about_Me::before {
   content: "";
   position: absolute;
   top: 0;
@@ -280,7 +294,7 @@ section {
   display: block;
   filter: blur(75px);
 }
-.About_Me .about-left {
+.about_Me .about-left {
   position: absolute;
   left: 10%;
   display: inline-block;
@@ -288,7 +302,7 @@ section {
   height: 500px;
   border-radius: 20px;
 }
-.About_Me .about-left .about_img {
+.about_Me .about-left .about_img {
   position: absolute;
   top: 40px;
   left: 50%;
@@ -301,7 +315,7 @@ section {
   border: 3px solid rgba(41, 48, 106, 0.25);
   border-radius: 10px;
 }
-.About_Me .about-left ul {
+.about_Me .about-left ul {
   position: absolute;
   bottom: 17%;
   left: 50%;
@@ -310,12 +324,12 @@ section {
   justify-content: center;
   width: 100%;
 }
-.About_Me .about-left ul li {
+.about_Me .about-left ul li {
   position: relative;
   display: block;
   padding: 0 10px;
 }
-.About_Me .about-left ul li h4 {
+.about_Me .about-left ul li h4 {
   position: relative;
   display: block;
   font-size: 22px;
@@ -323,14 +337,14 @@ section {
   color: #333;
   padding: 10px 0;
 }
-.About_Me .about-left ul li p {
+.about_Me .about-left ul li p {
   position: relative;
   display: block;
   font-size: 16px;
   font-weight: 600;
   white-space: nowrap;
 }
-.About_Me .about-left strong {
+.about_Me .about-left strong {
   position: absolute;
   bottom: 30px;
   left: 0;
@@ -340,7 +354,7 @@ section {
   font-weight: 600;
   text-align: center;
 }
-.About_Me .about-right {
+.about_Me .about-right {
   position: absolute;
   right: 10%;
   display: inline-block;
@@ -350,7 +364,7 @@ section {
   overflow: hidden;
   padding: 40px;
 }
-.About_Me .about-right::before {
+.about_Me .about-right::before {
   content: "";
   position: absolute;
   top: -250px;
@@ -363,32 +377,32 @@ section {
   opacity: 0.5;
   z-index: -1;
 }
-.About_Me .about-right ul {
+.about_Me .about-right ul {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
-.About_Me .about-right ul li {
+.about_Me .about-right ul li {
   position: relative;
   display: block;
   width: 100%;
 }
-.About_Me .about-right ul li h4 {
+.about_Me .about-right ul li h4 {
   position: relative;
   display: block;
   font-size: 25px;
   font-weight: 700;
   padding: 10px 0;
 }
-.About_Me .about-right ul li p {
+.about_Me .about-right ul li p {
   position: relative;
   display: block;
   font-size: 20px;
   padding-left: 10px;
   line-height: 1.3;
 }
-.About_Me .about-right ul li:last-child {
+.about_Me .about-right ul li:last-child {
   width: 100%;
 }
 
@@ -990,6 +1004,49 @@ section {
 }
 
 /* ===== ///Life ===== */
+/* ===== vision ===== */
+.vision .inner {
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+}
+.vision .inner .sample8 {
+  width: 250px;
+  height: 300px;
+  margin: 0 10px;
+}
+.vision .inner .sample8 h3 {
+  height: 40px;
+  font-family: "NanumSquareRound";
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 40px;
+}
+.vision .inner .sample8::before {
+  content: "";
+  position: absolute;
+  top: -47px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+.vision .inner .sample8:nth-child(1)::before {
+  background: url("../images/icon/vision_1.png") no-repeat center;
+  background-size: cover;
+}
+.vision .inner .sample8:nth-child(2)::before {
+  background: url("../images/icon/vision_2.png") no-repeat center;
+  background-size: cover;
+}
+.vision .inner .sample8:nth-child(3)::before {
+  background: url("../images/icon/vision_3.png") no-repeat center;
+  background-size: cover;
+}
+
+/* ===== ///vision ===== */
 /* ===== Contact ===== */
 .contact {
   background-color: #40606e;
