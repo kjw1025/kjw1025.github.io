@@ -1,10 +1,8 @@
 $(document).ready(function () {
-  $(function () {
-    // body
-    $("body").niceScroll({
-      cursorwidth: "10px",
-      railpadding: { top: 0, right: 10, left: 0, bottom: 0 },
-    });
+  // body
+  $("body").niceScroll({
+    cursorwidth: "10px",
+    railpadding: { top: 0, right: 10, left: 0, bottom: 0 },
   });
 });
 
@@ -67,5 +65,25 @@ window.onload = function () {
     slidesPerView: 4,
     spaceBetween: 30,
     speed: 1400,
+  });
+
+  let popopo = $(".popopo");
+  let popopo_Dsize = $(".popopo_down_size");
+
+  popopo.mouseenter(function () {
+    console.log("aaa");
+  });
+
+  // this.mouseenter(() => {});
+
+  $.each(popopo, function (index, item) {
+    $(this).mouseenter(function (e) {
+      e.preventDefault();
+      $(this).not(popopo.addClass("popopo_down_size"));
+    });
+    $(this).mouseleave(function (e) {
+      e.preventDefault();
+      $(this).not(popopo.removeClass("popopo_down_size"));
+    });
   });
 };
