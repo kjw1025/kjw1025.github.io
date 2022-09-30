@@ -77,13 +77,12 @@ window.onload = function () {
   // this.mouseenter(() => {});
 
   $.each(popopo, function (index, item) {
-    $(this).mouseenter(function (e) {
-      e.preventDefault();
-      $(this).not(popopo.addClass("popopo_down_size"));
+    $(this).mouseenter(function () {
+      popopo.addClass("popopo_down_size");
+      $(this).removeClass("popopo_down_size");
     });
-    $(this).mouseleave(function (e) {
-      e.preventDefault();
-      $(this).not(popopo.removeClass("popopo_down_size"));
+    $(this).mouseleave(function () {
+      popopo.removeClass("popopo_down_size");
     });
   });
 };

@@ -413,14 +413,17 @@ section {
   left: 300px;
   display: block;
   width: 350px;
-  height: 800px;
+  height: 480px;
   z-index: 100;
 }
 .portfolio-part_1 .sample2 span {
-  position: relative;
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  transform: translateX(-50%);
   display: block;
   width: 1px;
-  height: 40%;
+  height: 60%;
   margin: 0 auto;
   box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
   background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent);
@@ -429,7 +432,7 @@ section {
   position: relative;
   display: block;
   width: 100%;
-  height: 60%;
+  height: 100%;
   border: 3px solid rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
@@ -545,6 +548,7 @@ section {
   transform: rotate(90deg);
 }
 .portfolio-part_1 .sample2 .popopo_down_size {
+  opacity: 0.5;
   transform: scale(0.8);
 }
 .portfolio-part_1 .ptptpt2 {
@@ -996,6 +1000,7 @@ section {
   height: 260px;
   padding: 20px;
   margin: 0 10px;
+  transition: all 0.3s;
 }
 .vision .inner .sample8 h3 {
   font-family: "NanumSquareRound";
@@ -1022,13 +1027,22 @@ section {
   background: url("../images/icon/vision_1.png") no-repeat center;
   background-size: cover;
 }
+.vision .inner .sample8:nth-child(1):hover {
+  transform: translateY(-2%);
+}
 .vision .inner .sample8:nth-child(2)::before {
   background: url("../images/icon/vision_2.png") no-repeat center;
   background-size: cover;
 }
+.vision .inner .sample8:nth-child(2):hover {
+  transform: translateY(-5%);
+}
 .vision .inner .sample8:nth-child(3)::before {
   background: url("../images/icon/vision_3.png") no-repeat center;
   background-size: cover;
+}
+.vision .inner .sample8:nth-child(3):hover {
+  transform: translateY(-10%);
 }
 
 /* ===== ///vision ===== */
