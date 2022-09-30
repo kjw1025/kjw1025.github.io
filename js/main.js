@@ -5,14 +5,6 @@ $(document).ready(function () {
       cursorwidth: "10px",
       railpadding: { top: 0, right: 10, left: 0, bottom: 0 },
     });
-    // po1
-    // $(".po1").niceScroll({
-    //     cursorcolor: "#29306A",
-    //     cursoropacitymax: 0.8,
-    //     cursorwidth: "5px",
-    //     cursorborder: "1px solid transparent",
-    //     railpadding: { top: 0, right: 2, left: 0, bottom: 0 }
-    // });
   });
 });
 
@@ -63,8 +55,8 @@ window.onload = function () {
   //  ani
 
   MyWaypoint($(".pf_bg_1"), "down-go", "10%", 0); // pf_bg
-  MyWaypoint($(".portfolio-part_2 .headerBox"), "togolong-left", "70%", 0); // headerBox
-  MyWaypoint($(".portfolio-part_3 .headerBox"), "togolong-right", "70%", 0); // headerBox
+  // MyWaypoint($(".portfolio-part_2 .headerBox"), "togolong-left", "70%", 0); // headerBox
+  // MyWaypoint($(".portfolio-part_3 .headerBox"), "togolong-right", "70%", 0); // headerBox
 
   // swiper
 
