@@ -43,18 +43,11 @@ window.onload = function () {
     });
   }
 
-  MyWaypointOnOff(
-    $(".about_Me"),
-    $(".sideMenu_wrap"),
-    "sideMenu_wrap_on",
-    "50%"
-  ); // sideMenu on/off
+  MyWaypointOnOff($(".about"), $(".sideMenu_wrap"), "sideMenu_wrap_on", "50%"); // sideMenu on/off
 
   //  ani
 
-  MyWaypoint($(".pf_bg_1"), "down-go", "10%", 0); // pf_bg
-  // MyWaypoint($(".portfolio-part_2 .headerBox"), "togolong-left", "70%", 0); // headerBox
-  // MyWaypoint($(".portfolio-part_3 .headerBox"), "togolong-right", "70%", 0); // headerBox
+  // MyWaypoint($(".pf_bg_1"), "down-go", "10%", 0); // pf_bg
 
   // swiper
 
@@ -69,10 +62,6 @@ window.onload = function () {
 
   let popopo = $(".popopo");
   let popopo_Dsize = $(".popopo_down_size");
-
-  popopo.mouseenter(function () {
-    console.log("aaa");
-  });
 
   // this.mouseenter(() => {});
 
