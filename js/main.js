@@ -52,12 +52,19 @@ window.onload = function () {
   // swiper
 
   // study swiper img
-  let swStudy_Img = new Swiper(".sw_study_img", {
+  let sw_study_container = new Swiper(".sw-study-container", {
     loop: true,
-    autoplay: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     slidesPerView: 4,
     spaceBetween: 30,
     speed: 1400,
+    // pg
+    pagination: {
+      el: ".sw-study-pg",
+    },
   });
 
   let popopo = $(".popopo");
@@ -65,13 +72,13 @@ window.onload = function () {
 
   // this.mouseenter(() => {});
 
-  $.each(popopo, function (index, item) {
-    $(this).mouseenter(function () {
-      popopo.addClass("popopo_down_size");
-      $(this).removeClass("popopo_down_size");
-    });
-    $(this).mouseleave(function () {
-      popopo.removeClass("popopo_down_size");
-    });
-  });
+  // $.each(popopo, function (index, item) {
+  //   $(this).mouseenter(function () {
+  //     popopo.addClass("popopo_down_size");
+  //     $(this).removeClass("popopo_down_size");
+  //   });
+  //   $(this).mouseleave(function () {
+  //     popopo.removeClass("popopo_down_size");
+  //   });
+  // });
 };

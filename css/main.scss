@@ -295,16 +295,7 @@ section {
     display: block;
     width: 100%;
     height: 100%;
-    padding: 300px 50px 30px 300px;
-
-    strong {
-      position: relative;
-      display: block;
-
-      font-size: 60px;
-      font-weight: 400;
-      color: #111;
-    }
+    padding: 300px 50px 30px 400px;
 
     p {
       position: relative;
@@ -314,7 +305,7 @@ section {
       color: #000;
       line-height: 70px;
 
-      span {
+      strong {
         position: relative;
         display: inline-block;
 
@@ -326,7 +317,7 @@ section {
     }
   }
 
-  .arrow_down {
+  .home-arrow_down {
     position: absolute;
     bottom: 80px;
     left: 50%;
@@ -514,7 +505,7 @@ section {
     }
   }
   &-part_1 {
-    margin-bottom: 100px;
+    margin-bottom: 0;
   }
   &-part_2 {
     margin-bottom: 100px;
@@ -531,9 +522,7 @@ section {
   width: 100%;
   height: 2000px;
 
-  margin-bottom: 200px;
-
-  .sample2 {
+  .pf1-item {
     position: absolute;
     top: 300px;
     left: 300px;
@@ -541,38 +530,37 @@ section {
     width: 350px;
     height: 480px;
 
-    z-index: 100;
+    border: 3px solid rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
 
-    span {
-      position: absolute;
-      top: -60%;
-      left: 50%;
-      transform: translateX(-50%);
-      display: block;
-      width: 1px;
-      height: 60%;
-      margin: 0 auto;
-
-      box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent);
-    }
-
-    .popopo {
+    .pf1-item-inner {
       position: relative;
       display: block;
       width: 100%;
       height: 100%;
 
-      border: 3px solid rgba(0, 0, 0, 0.05);
-      border-radius: 10px;
-      filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
       transition: all 0.5s;
 
       &:hover {
-        transform: scale(1.3);
+        transform: scale(1.4);
       }
 
-      .po1 {
+      .pf1-item-line {
+        position: absolute;
+        top: -60%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 1px;
+        height: 60%;
+        margin: 0 auto;
+
+        box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent);
+      }
+
+      .pf1-item-top {
         position: relative;
         display: block;
         width: 100%;
@@ -593,7 +581,7 @@ section {
           }
         }
 
-        .po1_cover_wrap {
+        .pf1-item-info {
           position: absolute;
           top: 30px;
           left: 0;
@@ -645,13 +633,13 @@ section {
           }
         }
 
-        &:hover .po1_cover_wrap {
+        &:hover .pf1-item-info {
           left: 30px;
           width: 120px;
         }
       }
 
-      .po2 {
+      .pf1-item-bottom {
         position: relative;
         display: block;
         width: 100%;
@@ -691,12 +679,13 @@ section {
       &::after {
         content: "Lorem ipsum dolor sit amet.";
         position: absolute;
-        top: 80px;
-        right: -140px;
+        top: 0;
+        left: 100%;
         display: block;
 
         font-family: "Ibarra Real Nova";
         font-size: 20px;
+        white-space: nowrap;
         color: #000;
 
         transform: rotate(90deg);
@@ -709,24 +698,77 @@ section {
     }
   }
 
-  .ptptpt2 {
+  .pf1-item_1 {
+    .pf1-item-inner {
+      &::before {
+        content: "01";
+      }
+      &::after {
+        content: "Baexang Gallery";
+        top: 30px;
+        left: 300px;
+      }
+    }
+  }
+
+  .pf1-item_2 {
     top: 450px;
     left: 800px;
+    .pf1-item-inner {
+      &::before {
+        content: "02";
+      }
+      &::after {
+        content: "Oscar Product";
+        top: 22px;
+        left: 304px;
+      }
+    }
   }
 
-  .ptptpt3 {
+  .pf1-item_3 {
     top: 150px;
     left: 1300px;
+    .pf1-item-inner {
+      &::before {
+        content: "03";
+      }
+      &::after {
+        content: "A Twosome Place";
+        top: 40px;
+        left: 290px;
+      }
+    }
   }
 
-  .ptptpt4 {
-    top: 1050px;
+  .pf1-item_4 {
+    top: 1100px;
     left: 480px;
+    .pf1-item-inner {
+      &::before {
+        content: "04";
+      }
+      &::after {
+        content: "Jeong Yook Gak";
+        top: 33px;
+        left: 300px;
+      }
+    }
   }
 
-  .ptptpt5 {
-    top: 1000px;
+  .pf1-item_5 {
+    top: 1050px;
     left: 1200px;
+    .pf1-item-inner {
+      &::before {
+        content: "05";
+      }
+      &::after {
+        content: "ormak";
+        top: -10px;
+        left: 340px;
+      }
+    }
   }
 }
 
@@ -742,40 +784,34 @@ section {
   }
 
   // img
-  .sw_study-wrap {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
-    width: 1200px;
-
+  .inner {
     background-color: #fff;
     border-radius: 0;
     filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
     padding: 50px;
   }
 
-  .sw_study_img {
+  .sw-study-container {
     position: relative;
     display: block;
     width: 100%;
+    padding: 15px;
 
-    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
-
-    &-slide_wrap {
+    .sw-study-slide_wrap {
       position: relative;
       display: block;
       width: 100%;
       height: 350px;
 
       border-radius: 10px;
+      filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
       overflow: hidden;
 
       img {
         width: 100%;
       }
 
-      .titleBox {
+      .sw-study-slide-titleBox {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -812,7 +848,7 @@ section {
         }
       }
 
-      .infoBox {
+      .sw-study-slide-infoBox {
         position: absolute;
         top: 60px;
         left: 48%;
@@ -846,8 +882,36 @@ section {
         top: 17%;
       }
 
-      &:hover .titleBox {
+      &:hover .sw-study-slide-titleBox {
         height: 150px;
+      }
+    }
+  }
+
+  .sw-study-control {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 20px;
+
+    .sw-study-pg {
+      position: relative;
+      display: block;
+      width: 100%;
+
+      text-align: center;
+
+      .swiper-pagination-bullet {
+        margin: 0 5px;
+
+        transform: scale(0.8);
+        transition: all 0.3s;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: $main-color;
+        transform: scale(1.3);
       }
     }
   }
@@ -865,7 +929,7 @@ section {
     justify-content: space-between;
   }
 
-  .sample6 {
+  .pf3-item {
     display: inline-block;
     width: 49%;
     height: 600px;
@@ -874,7 +938,7 @@ section {
     border-radius: 0px;
     margin-top: 20px;
 
-    .sample6Img {
+    .pf3-item-img {
       position: relative;
       display: block;
       width: 100%;
@@ -883,7 +947,7 @@ section {
       border-radius: 30px;
     }
 
-    .sample6-txtbox {
+    .pf3-item-txtbox {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -945,8 +1009,8 @@ section {
     }
   }
 
-  .roro1 {
-    .sample6Img {
+  .pf3-item_1 {
+    .pf3-item-img {
       background: url("../images/ghibli_home.png") no-repeat center top;
       background-size: cover;
 
@@ -960,8 +1024,8 @@ section {
     }
   }
 
-  .roro2 {
-    .sample6Img {
+  .pf3-item_2 {
+    .pf3-item-img {
       background: url("../images/myMemo_home.svg") no-repeat center top;
       background-size: cover;
 
@@ -974,8 +1038,8 @@ section {
     }
   }
 
-  .roro3 {
-    .sample6Img {
+  .pf3-item_3 {
+    .pf3-item-img {
       background: url("../images/당근마켓home.png") no-repeat center top;
       background-size: cover;
       transition: all 0.3s;
@@ -1008,16 +1072,11 @@ section {
     height: 500px;
   }
 
-  .sample5 {
-    position: relative;
-    display: inline-block;
+  .pf-skill-item {
     width: 100%;
     height: 100%;
 
-    background-color: #fff;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
-
     padding: 0 2% 30px;
     transition: all 0.5s;
     overflow: hidden;
@@ -1066,7 +1125,7 @@ section {
     }
   }
 
-  .son1 {
+  .pf-skill-item_1 {
     grid-column: 1 / 2;
     grid-row: 1 / 5;
 
@@ -1098,7 +1157,7 @@ section {
       }
     }
   }
-  .son2 {
+  .pf-skill-item_2 {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
 
@@ -1115,7 +1174,7 @@ section {
       }
     }
   }
-  .son3 {
+  .pf-skill-item_3 {
     grid-column: 2 / 3;
     grid-row: 3 / 5;
 
@@ -1159,7 +1218,7 @@ section {
 
     // border: 1px solid #000;
 
-    .sample7 {
+    .lf-item {
       display: inline-block;
       border-radius: 0;
 
@@ -1239,7 +1298,7 @@ section {
       }
     }
 
-    .poto1 {
+    .lf-item_1 {
       grid-row: 1/3;
 
       &::before {
@@ -1248,7 +1307,7 @@ section {
       }
     }
 
-    .poto2 {
+    .lf-item_2 {
       grid-column: 2/4;
 
       &::before {
@@ -1257,7 +1316,7 @@ section {
       }
     }
 
-    .poto3 {
+    .lf-item_3 {
       grid-column: 4/5;
       grid-row: 1/3;
 
@@ -1266,7 +1325,7 @@ section {
       }
     }
 
-    .poto4 {
+    .lf-item_4 {
       &::before {
         background: url("../images/my_pt_6.svg") no-repeat top;
         background-size: cover;
@@ -1286,7 +1345,7 @@ section {
       }
     }
 
-    .poto5 {
+    .lf-item_5 {
       &::before {
         background: url("../images/my_pt_5.svg") no-repeat center;
         background-size: cover;
@@ -1329,7 +1388,7 @@ section {
     justify-content: center;
     width: 1000px;
 
-    .sample8 {
+    .vision-item {
       width: 300px;
       height: 260px;
 
@@ -1475,6 +1534,7 @@ section {
 
 /* ===== ///Contact ===== */
 // ---------------------------------------------------------------------
+
 /* ===== animation ===== */
 
 .down-go {
