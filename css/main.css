@@ -811,11 +811,13 @@ section {
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
 }
 .portfolio-part_3 .pf3-item_2 .pf3-item-img {
-  background: url("../images/myMemo_home.svg") no-repeat center top;
+  background: url("../images/myMemo_home.png") no-repeat center top;
   background-size: cover;
   transition: all 0.3s;
 }
 .portfolio-part_3 .pf3-item_2 .pf3-item-img:hover {
+  background: url("../images/myMemo_active.png") no-repeat center top;
+  background-size: cover;
   transform: scale(1.05);
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
 }
@@ -827,6 +829,15 @@ section {
 .portfolio-part_3 .pf3-item_3 .pf3-item-img:hover {
   background: url("../images/당근마켓_uppage.png") no-repeat center top;
   background-size: cover;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+}
+.portfolio-part_3 .pf3-item_4 .pf3-item-img {
+  background: url("../images/작업중img.png") no-repeat center;
+  background-size: cover;
+  transition: all 0.3s;
+}
+.portfolio-part_3 .pf3-item_4 .pf3-item-img:hover {
+  transform: scale(1.05);
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
 }
 
