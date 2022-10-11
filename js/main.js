@@ -4,6 +4,16 @@ $(document).ready(function () {
     cursorwidth: "10px",
     railpadding: { top: 0, right: 10, left: 0, bottom: 0 },
   });
+
+  // 위로가기 기능
+  let goTop = $(".gotop");
+
+  goTop.click(function () {
+    gsap.to("html", {
+      duration: 1.5,
+      scrollTop: 0,
+    });
+  });
 });
 
 window.onload = function () {
@@ -11,7 +21,6 @@ window.onload = function () {
   AOS.init();
 
   // waypoint 옵션
-
   function MyWaypoint(_what, _effect, _offset, _delay) {
     _what.each(function (index, el) {
       new Waypoint({
@@ -27,7 +36,6 @@ window.onload = function () {
       });
     });
   }
-
   // on/off
   function MyWaypointOnOff(_fromWhere, _what, _onClass, _offset) {
     new Waypoint({
@@ -44,12 +52,8 @@ window.onload = function () {
   }
 
   MyWaypointOnOff($(".about"), $(".sideMenu_wrap"), "sideMenu_wrap_on", "50%"); // sideMenu on/off
-
-  //  ani
-
-  // MyWaypoint($(".pf_bg_1"), "down-go", "10%", 0); // pf_bg
-
-  // swiper
+  MyWaypointOnOff($(".about"), $(".gotop"), "gotop_on", "20%"); // sideMenu on/off
+  MyWaypointOnOff($(".about"), $(".goPDF"), "goPDF_on", "20%"); // sideMenu on/off
 
   // study swiper img
   let sw_study_container = new Swiper(".sw-study-container", {
@@ -58,7 +62,23 @@ window.onload = function () {
       delay: 2500,
       disableOnInteraction: false,
     },
-    slidesPerView: 4,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    breakpoints: {
+      700: {
+        slidesPerView: 2, //브라우저가 768보다 클 때
+        spaceBetween: 40,
+      },
+      1025: {
+        slidesPerView: 3, //브라우저가 768보다 클 때
+        spaceBetween: 20,
+      },
+      1440: {
+        slidesPerView: 4, //브라우저가 1024보다 클 때
+        spaceBetween: 30,
+      },
+    },
+
     spaceBetween: 30,
     speed: 1400,
     // pg
@@ -66,19 +86,4 @@ window.onload = function () {
       el: ".sw-study-pg",
     },
   });
-
-  let popopo = $(".popopo");
-  let popopo_Dsize = $(".popopo_down_size");
-
-  // this.mouseenter(() => {});
-
-  // $.each(popopo, function (index, item) {
-  //   $(this).mouseenter(function () {
-  //     popopo.addClass("popopo_down_size");
-  //     $(this).removeClass("popopo_down_size");
-  //   });
-  //   $(this).mouseleave(function () {
-  //     popopo.removeClass("popopo_down_size");
-  //   });
-  // });
 };

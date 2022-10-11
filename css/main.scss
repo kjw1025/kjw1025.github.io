@@ -91,6 +91,16 @@ section {
     background-color: $main-color;
   }
 }
+@media all and (max-width: 1440px) {
+  .main-title {
+    font-size: 40px;
+  }
+}
+@media all and (max-width: 1025px) {
+  .main-title {
+    font-size: 34px;
+  }
+}
 
 .base_box {
   position: relative;
@@ -193,7 +203,106 @@ section {
   opacity: 1;
 }
 
+// 반응형
+@media all and (max-width: 1440px) {
+  .sideMenu_wrap {
+    height: 500px;
+
+    ul li {
+      height: 80px;
+    }
+  }
+}
+@media all and (max-width: 1025px) {
+  .sideMenu_wrap {
+    height: 400px;
+
+    ul li {
+      height: 60px;
+    }
+  }
+}
 /* ===== /// side-menu ===== */
+// ---------------------------------------------------------------------
+/* ===== tap-memu ===== */
+.tap-menu {
+  position: fixed;
+  right: 2.5%;
+  bottom: 3%;
+  display: block;
+  width: 60px;
+  height: 60px;
+
+  z-index: 999;
+
+  button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: 0;
+    border-radius: 10px;
+    background-color: $main-color;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+  }
+
+  /*  gotop  */
+  .gotop {
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+
+      font-size: 14px;
+      color: #fff;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      i {
+        top: 40%;
+        color: #f0f363;
+      }
+    }
+  }
+  .gotop_on {
+    visibility: visible;
+    opacity: 1;
+  }
+  /*  /// gotop  */
+
+  /* goPDF  */
+  .goPDF {
+    transition: all 0.3s;
+    i {
+      font-size: 22px;
+      color: #fff;
+      transition: all 0.3s;
+    }
+    &:hover {
+      i {
+        transform: scale(1.1);
+        color: #f0f363;
+      }
+    }
+  }
+  .goPDF_on {
+    top: -130%;
+  }
+  /* /// goPDF  */
+}
+
+/* ===== /// tap-memu ===== */
+
 // ---------------------------------------------------------------------
 /* ===== Home ===== */
 .home {
@@ -231,7 +340,7 @@ section {
   .homeNav {
     position: absolute;
     top: 95px;
-    right: 140px;
+    left: calc(100% - 740px);
     display: block;
     width: 600px;
     z-index: 99;
@@ -276,7 +385,7 @@ section {
     display: block;
     width: 100%;
     height: 100%;
-    padding: 310px 50px 30px 400px;
+    padding: 16vw 50px 30px 20vw;
 
     p {
       position: relative;
@@ -329,7 +438,79 @@ section {
     }
   }
 }
-
+// 반응형
+@media all and (max-width: 1440px) {
+  .home {
+    .logo {
+      font-size: 24px;
+    }
+    .homeNav {
+      top: 75px;
+    }
+    .home-main {
+      p {
+        font-size: 40px;
+        line-height: 60px;
+        strong {
+          font-size: 70px;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 1025px) {
+  .home {
+    .logo {
+      top: 20px;
+      left: 20px;
+      font-size: 20px;
+    }
+    .homeNav {
+      top: 80px;
+      ul {
+        li {
+          a {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .home-main {
+      padding-top: 250px;
+      p {
+        font-size: 30px;
+        line-height: 50px;
+        strong {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 800px) {
+  .home {
+    .homeNav {
+      left: calc(100% - 440px);
+      width: 400px;
+      ul {
+        li {
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .home-main {
+      padding-top: 200px;
+      padding-right: 40px;
+      p {
+        strong {
+          font-size: 42px;
+        }
+      }
+    }
+  }
+}
 /* ===== /// Home ===== */
 // ---------------------------------------------------------------------
 /* ===== About ===== */
@@ -358,15 +539,13 @@ section {
     width: 400px;
     height: 500px;
 
-    border-radius: 15px;
-
     .about_img {
       position: absolute;
       top: 40px;
       left: 50%;
       transform: translateX(-50%);
       display: block;
-      width: 300px;
+      width: 17vw;
       height: 300px;
 
       background: url("../images/sample_img_1.svg") no-repeat center;
@@ -479,7 +658,46 @@ section {
     }
   }
 }
+// 반응형
+@media all and (max-width: 1440px) {
+  .about {
+    .main-title {
+      width: 76vw;
+    }
+    .inner {
+      width: 84vw;
+    }
+  }
+}
+@media all and (max-width: 1025px) {
+  .about {
+    .about-left {
+      ul li {
+        h4 {
+          font-size: 12px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+      strong {
+        font-size: 16px;
+      }
+    }
 
+    .about-right {
+      ul li {
+        h4 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}
 /* ===== ///About ===== */
 // ---------------------------------------------------------------------
 /* ===== Portfolio ===== */
@@ -513,10 +731,10 @@ section {
   .pf1-item {
     position: absolute;
     top: 300px;
-    left: 300px;
+    left: 15.6vw;
     display: block;
-    width: 350px;
-    height: 480px;
+    width: 18vw;
+    height: 48vh;
 
     border: 3px solid rgba(0, 0, 0, 0.05);
     border-radius: 10px;
@@ -694,14 +912,14 @@ section {
       &::after {
         content: "Baexang Gallery";
         top: 30px;
-        left: 300px;
+        left: 15vw;
       }
     }
   }
 
   .pf1-item_2 {
     top: 450px;
-    left: 780px;
+    left: 40.6vw;
     .pf1-item-inner {
       &::before {
         content: "02";
@@ -709,14 +927,14 @@ section {
       &::after {
         content: "Oscar Product";
         top: 22px;
-        left: 304px;
+        left: 15.6vw;
       }
     }
   }
 
   .pf1-item_3 {
     top: 150px;
-    left: 1280px;
+    left: 66.6vw;
     .pf1-item-inner {
       &::before {
         content: "03";
@@ -724,14 +942,14 @@ section {
       &::after {
         content: "A Twosome Place";
         top: 40px;
-        left: 290px;
+        left: 15vw;
       }
     }
   }
 
   .pf1-item_4 {
     top: 1100px;
-    left: 480px;
+    left: 25vw;
     .pf1-item-inner {
       &::before {
         content: "04";
@@ -739,14 +957,14 @@ section {
       &::after {
         content: "Jeong Yook Gak";
         top: 33px;
-        left: 300px;
+        left: 15vw;
       }
     }
   }
 
   .pf1-item_5 {
     top: 1050px;
-    left: 1200px;
+    left: 62.5vw;
     .pf1-item-inner {
       &::before {
         content: "05";
@@ -754,7 +972,7 @@ section {
       &::after {
         content: "ormak";
         top: -10px;
-        left: 340px;
+        left: 17.7vw;
       }
     }
   }
@@ -908,7 +1126,17 @@ section {
     }
   }
 }
-
+// 반응형
+@media all and (max-width: 1440px) {
+  .portfolio-part_2 {
+    .main-title {
+      width: 83.33vw;
+    }
+    .inner {
+      width: 84vw;
+    }
+  }
+}
 // 프로젝트
 .portfolio-part_3 {
   position: relative;
@@ -1058,6 +1286,34 @@ section {
     }
   }
 }
+// 반응형
+@media all and (max-width: 1440px) {
+  .portfolio-part_3 {
+    .inner {
+      width: 84vw;
+
+      .pf3-item-txtbox {
+        h3 {
+          font-size: 25px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 700px) {
+  .portfolio-part_3 {
+    .inner {
+      width: 84vw;
+
+      .pf3-item {
+        width: 100%;
+      }
+    }
+  }
+}
 
 // 스킬
 .portfolio-part_skill {
@@ -1078,7 +1334,7 @@ section {
     left: 50%;
     display: grid;
     justify-content: center;
-    grid-template-columns: 450px 450px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
     gap: 20px;
 
@@ -1207,7 +1463,14 @@ section {
     }
   }
 }
-
+// 반응형
+@media all and (max-width: 1025px) {
+  .portfolio-part_skill {
+    .inner {
+      width: 97.5vw;
+    }
+  }
+}
 /* ===== ///Portfolio ===== */
 // ---------------------------------------------------------------------
 /* ===== Life ===== */
@@ -1334,8 +1597,9 @@ section {
       grid-column: 4/5;
       grid-row: 1/3;
 
-      span {
-        color: #000;
+      &::before {
+        background: url("../images/my_pt_7.jpg") no-repeat center;
+        background-size: cover;
       }
     }
 
@@ -1364,6 +1628,17 @@ section {
         background: url("../images/my_pt_5.svg") no-repeat center;
         background-size: cover;
       }
+    }
+  }
+}
+// 반응형
+@media all and (max-width: 1440px) {
+  .life {
+    .main-title {
+      width: 83.33vw;
+    }
+    .inner {
+      width: 83.33vw;
     }
   }
 }
@@ -1399,6 +1674,7 @@ section {
 
   .inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 1000px;
 
@@ -1463,6 +1739,22 @@ section {
         &:hover {
           transform: translateY(-10%);
         }
+      }
+    }
+  }
+}
+// 반응형
+@media all and (max-width: 1025px) {
+  .vision {
+    .main-title {
+      width: 87.8vw;
+    }
+    .inner {
+      width: 97.5vw;
+
+      .vision-item {
+        width: 90%;
+        margin: 20px 0;
       }
     }
   }
@@ -1543,28 +1835,19 @@ section {
       font-size: 18px;
       font-weight: 400;
       color: #fff;
+      white-space: nowrap;
     }
   }
 }
-
+// 반응형
+@media all and (max-width: 1025px) {
+  .contact {
+    .copyright {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
 /* ===== ///Contact ===== */
 // ---------------------------------------------------------------------
-
-/* ===== animation ===== */
-
-.down-go {
-  animation: down-go 1s 1 ease-out;
-  animation-fill-mode: forwards;
-}
-
-@keyframes down-go {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-
-  100% {
-    opacity: 1;
-  }
-}

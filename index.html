@@ -56,6 +56,12 @@
   <!-- nicescroll.js -->
   <script src="js/jquery.nicescroll.min.js"></script>
 
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- font-awesome -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- font -->
   <link rel="stylesheet" href="css/font.css">
@@ -70,7 +76,7 @@
   <div class="wrap">
 
 
-    <!-- side-menu -->
+    <!-- == side-menu == -->
     <div class="sideMenu_wrap">
       <ul>
         <li>
@@ -90,7 +96,23 @@
         </li>
       </ul>
     </div>
-    <!-- /// side-menu -->
+    <!-- == /// side-menu == -->
+    
+    <!-- == tap-memu == -->
+    <div class="tap-menu">
+      <!-- goPDF -->
+      <button class="goPDF">
+        <i class="fas fa-file-pdf"></i>
+      </button>
+      <!-- /// goPDF -->
+      
+      <!-- gotop -->
+      <button class="gotop">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+      <!-- /// gotop -->
+    </div>
+    <!-- == tap-memu == -->
 
     <!-- ===== Home ===== -->
     <section class="home" id="Home">
@@ -143,23 +165,23 @@
     <!-- ===== About Me ===== -->
     <section class="about" id="About">
 
-      <h3 class="main-title">About Me</h3>
+      <h3 class="main-title" data-aos="fade-right" data-aos-duration="1500">About Me</h3>
 
       <div class="inner">
         <!-- left -->
         <div class="base_box about-left">
-                    <div class="about_img"></div>
-                    <ul>
-                        <li>
-                            <h4>📇 이름</h4>
-                            <p>권중운</p>
-                        </li>
-                        <li>
-                            <h4>📅 생년월일</h4>
-                            <p>2001.10.25</p>
-                        </li>
-                    </ul>
-                    <strong>" 늘 배움의 자세로 앞으로 나아가자! "</strong>
+          <div class="about_img"></div>
+          <ul>
+            <li>
+              <h4>📇 이름</h4>
+              <p>권중운</p>
+            </li>
+            <li>
+              <h4>📅 생년월일</h4>
+              <p>2001.10.25</p>
+            </li>
+          </ul>
+          <strong>" 늘 배움의 자세로 앞으로 나아가자! "</strong>
         </div>
         <!-- right -->
         <div class="base_box about-right">
@@ -197,7 +219,7 @@
 
     <!-- ===== Portfolio ===== -->
     <section class="portfolio" id="Portfolio">
-      <h3 class="main-title">Portfolio</h3>
+      <h3 class="main-title" data-aos="fade-down" data-aos-duration="1500">Portfolio</h3>
 
       <div class="portfolio-part_1">
         <!-- data-aos-once="true" -->
@@ -316,7 +338,7 @@
 
       <div class="portfolio-part_2">
 
-        <h3 class="main-title">Web Publishing</h3>
+        <h3 class="main-title" data-aos="fade-down" data-aos-duration="1500">Web Publishing</h3>
         <!-- img -->
         <div class="inner">
           <div class="swiper-container sw-study-container">
@@ -419,7 +441,7 @@
 
       <div class="portfolio-part_3">
 
-        <h3 class="main-title">Project</h3>
+        <h3 class="main-title" data-aos="fade-down" data-aos-duration="1500">Project</h3>
         <div class="inner">
           <div class="base_box pf3-item pf3-item_1">
             <a href="https://kjw1025.github.io/page-ghibli/" target="_blank" class="pf3-item-img"></a>
@@ -474,7 +496,7 @@
 
       <div class="portfolio-part_skill">
 
-        <h2 class="main-title">Skill</h2>
+        <h2 class="main-title" data-aos="fade-down" data-aos-duration="1500">Skill</h2>
 
         <div class="inner">
 
@@ -529,10 +551,10 @@
     <!-- ===== Life ===== -->
     <section class="life" id="Life">
 
-      <h3 class="main-title">Life</h3>
+      <h3 class="main-title" data-aos="fade-right" data-aos-duration="1500">Life</h3>
 
       <div class="inner">
-        <div class="base_box lf-item lf-item_1">
+        <div class="base_box lf-item lf-item_1" data-aos="flip-left" data-aos-duration="1200" data-aos-delay="0">
           <span># 서울 성수동</span>
           <div class="potoCover">
             <p>
@@ -541,7 +563,7 @@
             </p>
           </div>
         </div>
-        <div class="base_box lf-item lf-item_2">
+        <div class="base_box lf-item lf-item_2" data-aos="flip-left" data-aos-duration="1200" data-aos-delay="200">
           <span># 서울 하늘공원</span>
           <div class="potoCover">
             <p>
@@ -550,12 +572,16 @@
             </p>
           </div>
         </div>
-        <div class="base_box lf-item lf-item_3">
+        <div class="base_box lf-item lf-item_3" data-aos="flip-left" data-aos-duration="1200" data-aos-delay="600">
           <span># 동성로 카페</span>
           <div class="potoCover">
+            <p>
+              <strong>카페 ☕</strong>
+              원래도 음료제조하는것을 좋아했고, 분위기,감각적인 인테리어 등등 관찰하는것을 좋아합니다!
+            </p>
           </div>
         </div>
-        <div class="base_box lf-item lf-item_4">
+        <div class="base_box lf-item lf-item_4" data-aos="flip-left" data-aos-duration="1200" data-aos-delay="200">
           <span># 해외축구</span>
           <div class="potoCover">
             <p>
@@ -565,7 +591,7 @@
             </p>
           </div>
         </div>
-        <div class="base_box lf-item lf-item_5">
+        <div class="base_box lf-item lf-item_5" data-aos="flip-left" data-aos-duration="1200" data-aos-delay="400">
           <span># 운동</span>
           <div class="potoCover">
             <p>
@@ -583,7 +609,7 @@
 
     <!-- ===== Vision ===== -->
     <section class="vision">
-      <h3 class="main-title">Vision</h3>
+      <h3 class="main-title" data-aos="fade-down" data-aos-duration="1500">Vision</h3>
 
       <div class="inner">
         <div class="base_box vision-item">
