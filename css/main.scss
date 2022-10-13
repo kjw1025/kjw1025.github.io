@@ -235,14 +235,13 @@ section {
 
   z-index: 999;
 
-  button {
+  a {
     position: absolute;
     top: 0;
     left: 0;
     display: block;
     width: 60px;
     height: 60px;
-    border: 0;
     border-radius: 10px;
     background-color: $main-color;
     filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
@@ -284,13 +283,18 @@ section {
   .goPDF {
     transition: all 0.3s;
     i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+
       font-size: 22px;
       color: #fff;
       transition: all 0.3s;
     }
     &:hover {
       i {
-        transform: scale(1.1);
         color: #f0f363;
       }
     }
@@ -545,11 +549,11 @@ section {
       left: 50%;
       transform: translateX(-50%);
       display: block;
-      width: 17vw;
+      width: 11.5vw;
       height: 300px;
 
-      background: url("../images/sample_img_1.svg") no-repeat center;
-      background-size: cover;
+      background: url("../images/myimg.png") no-repeat center;
+      background-size: contain;
 
       border: 3px solid rgba($color: $main-color, $alpha: 0.25);
       border-radius: 10px;
