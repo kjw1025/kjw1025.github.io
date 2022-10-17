@@ -65,7 +65,6 @@ section {
   position: relative;
   display: block;
   width: 100%;
-  min-width: 1000px;
 
   padding-top: 100px;
 }
@@ -388,7 +387,7 @@ section {
     display: block;
     width: 100%;
     height: 100%;
-    padding: 18vw 50px 30px 16vw;
+    padding: 18% 50px 30px 16%;
 
     p {
       position: relative;
@@ -410,6 +409,7 @@ section {
         font-size: 80px;
         line-height: 100px;
         color: $main-color;
+        white-space: nowrap;
 
         margin-top: 10px;
       }
@@ -417,8 +417,8 @@ section {
 
     .home-main-pic {
       position: absolute;
-      left: 62vw;
-      top: 220px;
+      left: 62%;
+      top: 23%;
       width: 440px;
     }
   }
@@ -462,7 +462,7 @@ section {
         font-size: 40px;
         line-height: 60px;
         strong {
-          font-size: 70px;
+          font-size: 64px;
         }
       }
     }
@@ -497,6 +497,13 @@ section {
     }
   }
 }
+@media all and (max-width: 1025px) {
+  .home {
+    .home-main-pic {
+      visibility: hidden;
+    }
+  }
+}
 @media all and (max-width: 800px) {
   .home {
     .homeNav {
@@ -511,11 +518,12 @@ section {
       }
     }
     .home-main {
-      padding-top: 200px;
+      padding-top: 180px;
       padding-right: 40px;
       p {
+        line-height: 100px;
         strong {
-          font-size: 42px;
+          font-size: 36px;
         }
       }
     }
@@ -555,7 +563,7 @@ section {
       left: 50%;
       transform: translateX(-50%);
       display: block;
-      width: 11.5vw;
+      width: 215px;
       border: 3px solid rgba($color: $main-color, $alpha: 0.25);
       border-radius: 10px;
       overflow: hidden;
@@ -575,6 +583,7 @@ section {
       align-items: center;
       justify-content: center;
       width: 100%;
+      white-space: nowrap;
 
       li {
         position: relative;
@@ -679,30 +688,46 @@ section {
     }
   }
 }
-@media all and (max-width: 1025px) {
+
+@media all and (max-width: 900px) {
   .about {
-    .about-left {
-      ul li {
-        h4 {
-          font-size: 12px;
-        }
-        p {
-          font-size: 16px;
+    .inner {
+      flex-wrap: wrap;
+
+      .about-left {
+        width: 100%;
+        margin-bottom: 50px;
+
+        ul li {
+          width: 35%;
         }
       }
-      strong {
-        font-size: 16px;
+      .about-right {
+        width: 100%;
       }
     }
-
-    .about-right {
-      ul li {
-        h4 {
-          font-size: 18px;
+  }
+}
+@media all and (max-width: 650px) {
+  .about {
+    .main-title::after {
+      left: 200px;
+    }
+    .inner {
+      .about-left {
+        ul li {
+          width: 50%;
         }
-        p {
-          font-size: 14px;
-          line-height: 25px;
+      }
+      .about-right {
+        height: 550px;
+        ul li {
+          h4 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 16px;
+          }
         }
       }
     }
@@ -738,16 +763,23 @@ section {
   display: block;
   width: 100%;
   height: 1800px;
-  background: url("../images/port_bg.png") no-repeat 50% -30%;
-  background-size: 90%;
+
+  .pf1-bg {
+    position: absolute;
+    display: block;
+
+    img {
+      opacity: 0.5;
+    }
+  }
 
   .pf1-item {
     position: absolute;
     top: 330px;
-    left: 15.6vw;
+    left: 15.6%;
     display: block;
-    width: 18vw;
-    height: 48vh;
+    width: 18%;
+    height: 450px;
 
     border: 3px solid rgba(0, 0, 0, 0.05);
     border-radius: 10px;
@@ -990,7 +1022,29 @@ section {
     }
   }
 }
+// 반응형
+@media all and (max-width: 1440px) {
+  .portfolio-part_1 {
+    .pf1-bg {
+      img {
+        width: 90%;
+      }
+    }
+  }
+}
+@media all and (max-width: 1025px) {
+  .portfolio-part_1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
+    .pf1-item {
+      position: relative;
+      width: 80%;
+    }
+  }
+}
 // 웹 퍼블리싱
 .portfolio-part_2 {
   position: relative;
