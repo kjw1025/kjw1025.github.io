@@ -51,6 +51,8 @@ window.onload = function () {
     });
   }
 
+  MyWaypoint($(".pf1-bg"), "pf1-bg_on", "80%", 0);
+
   MyWaypointOnOff($(".about"), $(".sideMenu_wrap"), "sideMenu_wrap_on", "50%"); // sideMenu on/off
   MyWaypointOnOff($(".about"), $(".gotop"), "gotop_on", "20%"); // sideMenu on/off
   MyWaypointOnOff($(".about"), $(".goPDF"), "goPDF_on", "20%"); // sideMenu on/off

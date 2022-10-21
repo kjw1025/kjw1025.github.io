@@ -103,7 +103,17 @@ section {
   transition: all 0.5s;
   overflow: hidden;
   border-radius: 0 10px 10px 0;
-  opacity: 0;
+}
+.sideMenu_wrap i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  opacity: 1;
+  transition: all 0.2s;
 }
 .sideMenu_wrap ul {
   position: relative;
@@ -116,19 +126,6 @@ section {
   padding-left: 40px;
   border-radius: 0 10px 10px 0;
   background-color: rgba(41, 48, 106, 0.9);
-}
-.sideMenu_wrap ul::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  display: block;
-  width: 2px;
-  height: 80%;
-  background-color: #fff;
-  opacity: 0.7;
-  transition: all 0.7s;
 }
 .sideMenu_wrap ul li {
   position: relative;
@@ -155,6 +152,10 @@ section {
 }
 .sideMenu_wrap:hover {
   width: 250px;
+}
+.sideMenu_wrap:hover i {
+  visibility: hidden;
+  opacity: 0;
 }
 .sideMenu_wrap:visited {
   width: 250px;
@@ -634,13 +635,19 @@ section {
 }
 .portfolio-part_1 .pf1-bg {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 5%;
+  left: 10%;
+  transform: scale(0.5);
   display: block;
+  opacity: 0;
+  transition: all 3s;
 }
 .portfolio-part_1 .pf1-bg img {
   opacity: 0.5;
+}
+.portfolio-part_1 .pf1-bg_on {
+  transform: scale(1);
+  opacity: 1;
 }
 .portfolio-part_1 .pf1-item {
   position: absolute;
@@ -790,11 +797,11 @@ section {
   left: 15vw;
 }
 .portfolio-part_1 .pf1-item_2 {
-  top: 480px;
-  left: 40.6vw;
+  top: 1120px;
+  left: 25vw;
 }
 .portfolio-part_1 .pf1-item_2 .pf1-item-inner::before {
-  content: "02";
+  content: "04";
 }
 .portfolio-part_1 .pf1-item_2 .pf1-item-inner::after {
   content: "Oscar Product";
@@ -802,11 +809,11 @@ section {
   left: 15.6vw;
 }
 .portfolio-part_1 .pf1-item_3 {
-  top: 260px;
-  left: 66.6vw;
+  top: 1020px;
+  left: 62.5vw;
 }
 .portfolio-part_1 .pf1-item_3 .pf1-item-inner::before {
-  content: "03";
+  content: "05";
 }
 .portfolio-part_1 .pf1-item_3 .pf1-item-inner::after {
   content: "A Twosome Place";
@@ -814,11 +821,11 @@ section {
   left: 15vw;
 }
 .portfolio-part_1 .pf1-item_4 {
-  top: 1120px;
-  left: 25vw;
+  top: 480px;
+  left: 40.6vw;
 }
 .portfolio-part_1 .pf1-item_4 .pf1-item-inner::before {
-  content: "04";
+  content: "02";
 }
 .portfolio-part_1 .pf1-item_4 .pf1-item-inner::after {
   content: "Jeong Yook Gak";
@@ -826,11 +833,11 @@ section {
   left: 15vw;
 }
 .portfolio-part_1 .pf1-item_5 {
-  top: 1020px;
-  left: 62.5vw;
+  top: 260px;
+  left: 66.6vw;
 }
 .portfolio-part_1 .pf1-item_5 .pf1-item-inner::before {
-  content: "05";
+  content: "03";
 }
 .portfolio-part_1 .pf1-item_5 .pf1-item-inner::after {
   content: "ormak";

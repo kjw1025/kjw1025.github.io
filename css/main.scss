@@ -132,7 +132,19 @@ section {
   overflow: hidden;
   border-radius: 0 10px 10px 0;
 
-  opacity: 0;
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+
+    font-size: 18px;
+    color: #fff;
+    opacity: 1;
+
+    transition: all 0.2s;
+  }
 
   ul {
     position: relative;
@@ -146,20 +158,6 @@ section {
     padding-left: 40px;
     border-radius: 0 10px 10px 0;
     background-color: rgba($color: $main-color, $alpha: 0.9);
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 10px;
-      transform: translateY(-50%);
-      display: block;
-      width: 2px;
-      height: 80%;
-      background-color: #fff;
-      opacity: 0.7;
-      transition: all 0.7s;
-    }
 
     li {
       position: relative;
@@ -192,6 +190,10 @@ section {
 
   &:hover {
     width: 250px;
+    i {
+      visibility: hidden;
+      opacity: 0;
+    }
   }
   &:visited {
     width: 250px;
@@ -801,14 +803,22 @@ section {
 
   .pf1-bg {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 5%;
+    left: 10%;
+    transform: scale(0.5);
     display: block;
+
+    opacity: 0;
+    transition: all 3s;
 
     img {
       opacity: 0.5;
     }
+  }
+  .pf1-bg_on {
+    transform: scale(1);
+
+    opacity: 1;
   }
 
   .pf1-item {
@@ -996,11 +1006,11 @@ section {
   }
 
   .pf1-item_2 {
-    top: 480px;
-    left: 40.6vw;
+    top: 1120px;
+    left: 25vw;
     .pf1-item-inner {
       &::before {
-        content: "02";
+        content: "04";
       }
       &::after {
         content: "Oscar Product";
@@ -1011,11 +1021,11 @@ section {
   }
 
   .pf1-item_3 {
-    top: 260px;
-    left: 66.6vw;
+    top: 1020px;
+    left: 62.5vw;
     .pf1-item-inner {
       &::before {
-        content: "03";
+        content: "05";
       }
       &::after {
         content: "A Twosome Place";
@@ -1026,11 +1036,11 @@ section {
   }
 
   .pf1-item_4 {
-    top: 1120px;
-    left: 25vw;
+    top: 480px;
+    left: 40.6vw;
     .pf1-item-inner {
       &::before {
-        content: "04";
+        content: "02";
       }
       &::after {
         content: "Jeong Yook Gak";
@@ -1041,11 +1051,11 @@ section {
   }
 
   .pf1-item_5 {
-    top: 1020px;
-    left: 62.5vw;
+    top: 260px;
+    left: 66.6vw;
     .pf1-item-inner {
       &::before {
-        content: "05";
+        content: "03";
       }
       &::after {
         content: "ormak";
